@@ -1,7 +1,7 @@
 import { Flex, theme, Typography } from "antd";
 
 import NavContent from "./content";
-import MedeberLogo from "../../assets/Images/medeber.png";
+import MedeberLogo from "../../../../assets/Images/medeber.png";
 
 import { FIRMNAME } from "../../types";
 import { navContentA, navContentB } from "../../utills/data";
