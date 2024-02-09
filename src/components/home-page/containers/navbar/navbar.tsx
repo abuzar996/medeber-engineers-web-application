@@ -6,13 +6,17 @@ import { navContentA, navContentB } from "../../utills/data";
 import NavBarSearch from "./search";
 const color1 = "#1b1247";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useState } from "react";
 import Icons from "./icons";
 
 //const color2 = "#efc75e";
 
 const NavBar = () => {
   const { token } = theme.useToken();
-
+  const [menuActive, setMenuActive] = useState(false);
+  const handleMenuClicked = () => {
+    setMenuActive((menuActive) => !menuActive);
+  };
   return (
     <Flex
       flex="1"
@@ -49,8 +53,8 @@ const NavBar = () => {
         </Typography.Text>
       </Flex>
 
-      <Flex justify="space-around" flex={1} className="xs:max-md:hidden">
-        <NavContent navData={navContentA} />
+      <Flex justify="space-around" flex={1}>
+        <NavContent navData={navContentA} menuActive={menuActive} />
       </Flex>
       <Flex
         flex="1"
@@ -58,12 +62,12 @@ const NavBar = () => {
       >
         <NavBarSearch />
       </Flex>
-      <Flex justify="space-around" flex={1} className="xs:max-md:hidden">
-        <NavContent navData={navContentB} />
+      <Flex justify="space-around" flex="1">
+        <NavContent navData={navContentB} menuActive={menuActive} />
       </Flex>
       <Flex justify="flex-end" align="center" className="md:hidden">
         <Icons>
-          <RxHamburgerMenu />
+          <RxHamburgerMenu onClick={handleMenuClicked} />
         </Icons>
       </Flex>
     </Flex>
