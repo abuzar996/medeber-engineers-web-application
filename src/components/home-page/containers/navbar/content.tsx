@@ -10,6 +10,7 @@ const NavContent: React.FC<NavContentProps> = ({ navData }) => {
     <>
       {navData.map((data) => (
         <Flex
+          key={data.id}
           gap="middle"
           style={{ color: token.colorBgBase, padding: token.paddingXS }}
           align="center"
@@ -17,7 +18,6 @@ const NavContent: React.FC<NavContentProps> = ({ navData }) => {
         >
           {data.icon}
           <Typography.Text
-            key={data.id}
             style={{
               color: color1,
               fontWeight: token.fontWeightStrong,

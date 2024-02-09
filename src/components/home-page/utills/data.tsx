@@ -45,7 +45,7 @@ export const navContentB: HomepageData[] = [
     ),
   },
   {
-    id: 3,
+    id: 5,
     label: "Contact Us",
     icon: (
       <Icons>

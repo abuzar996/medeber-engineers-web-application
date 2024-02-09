@@ -1,11 +1,25 @@
-import { Flex, theme, ConfigProvider, Input } from "antd";
+import { Flex, /*theme,*/ ConfigProvider, Input } from "antd";
 import Icons from "./icons";
 const color1 = "#1b1247";
 import { CiSearch } from "react-icons/ci";
-const NavBarSearch = () => {
-  const { token } = theme.useToken();
+import { IoMdCloseCircleOutline } from "react-icons/io";
+
+import { useState } from "react";
+interface SearchProps {}
+const NavBarSearch: React.FC<SearchProps> = () => {
+  //const { token } = theme.useToken();
+  const [searchActive, setSearchActive] = useState(false);
+  const handleSearchClick = () => {
+    setSearchActive((searchActive) => !searchActive);
+  };
   return (
-    <Flex align="center">
+    <Flex
+      align="center"
+      className={`xs:max-md:${
+        searchActive ? "flex-1 pl-[10px]" : "justify-end"
+      }`}
+      gap="middle"
+    >
       <ConfigProvider
         theme={{
           components: {
@@ -20,12 +34,12 @@ const NavBarSearch = () => {
         }}
       >
         <Input
-          className="bg-transparent "
+          className={`bg-transparent xs:max-md:${searchActive ? "" : "hidden"}`}
           placeholder="Search"
           style={{
-            color: token.colorBgBase,
+            color: color1,
             borderRadius: "15px",
-            width: "270px",
+            width: "100%",
             borderColor: color1,
           }}
           allowClear={true}
@@ -37,6 +51,26 @@ const NavBarSearch = () => {
           size="middle"
         />
       </ConfigProvider>
+      <Flex
+        align="center"
+        justify="flex:end"
+        flex={1}
+        className={`md:hidden ${searchActive ? "hidden" : ""}`}
+      >
+        <Icons>
+          <CiSearch onClick={handleSearchClick} />
+        </Icons>
+      </Flex>
+      <Flex
+        align="center"
+        justify="flex:end"
+        flex={1}
+        className={`md:hidden ${!searchActive ? "hidden" : ""}`}
+      >
+        <Icons>
+          <IoMdCloseCircleOutline size="25px" onClick={handleSearchClick} />
+        </Icons>
+      </Flex>
     </Flex>
   );
 };
