@@ -1,4 +1,7 @@
 import Icons from "../containers/navbar/icons";
+
+import { Flex, Card, Typography } from "antd";
+import { DefaultOptionType } from "antd/es/select";
 import { HomepageData } from "../types";
 import { IoIosPeople } from "react-icons/io";
 import { TbFileDescription } from "react-icons/tb";
@@ -23,125 +26,257 @@ import { GiRollingEnergy } from "react-icons/gi";
 import { SiCoinmarketcap } from "react-icons/si";
 
 import { MdOutlineAgriculture } from "react-icons/md";
-export const navContentA: HomepageData[] = [
-  {
-    id: 1,
-    label: "Services",
-    icon: (
-      <Icons>
-        <FaServicestack className=" fill-inherit text-inherit" />
-      </Icons>
-    ),
-    items: [
-      {
-        label: "Electrical Engineering",
-        key: "1",
-      },
-      {
-        label: "Mechanical Engineering",
-        key: "2",
-      },
-      {
-        label: "Structural Engineering",
-        key: "3",
-      },
-      {
-        label: "Software Development",
-        key: "4",
-      },
-      {
-        label: "Energy Services",
-        key: "5",
-      },
-      {
-        label: "Technology",
-        key: "6",
-      },
-      {
-        label: "Manufacturing",
-        key: "7",
-      },
-    ],
-  },
-  {
-    id: 2,
-    label: "Portfolio",
-    icon: (
-      <Icons>
-        <TbFileDescription />
-      </Icons>
-    ),
-    items: [
-      {
-        label: "Projects",
-        key: "1",
-      },
-      {
-        label: "Experts",
-        key: "2",
-      },
-      {
-        label: "Markets",
-        key: "3",
-      },
-    ],
-  },
-];
-export const navContentB: HomepageData[] = [
-  {
-    id: 3,
-    label: "People",
-    icon: (
-      <Icons>
-        <IoIosPeople />
-      </Icons>
-    ),
-    items: [
-      {
-        label: "Careers",
-        key: "1",
-      },
-      {
-        label: "Continue Education",
-        key: "2",
-      },
-    ],
-  },
-  {
-    id: 4,
-    label: "About Us",
-    icon: (
-      <Icons>
-        <TbArrowRoundaboutRight />
-      </Icons>
-    ),
 
-    items: [
-      {
-        label: "Culture",
-        key: "1",
-      },
-      {
-        label: "News",
-        key: "2",
-      },
-      {
-        label: "Events",
-        key: "3",
-      },
-    ],
-  },
-  {
-    id: 5,
-    label: "Contact Us",
-    icon: (
-      <Icons>
-        <IoIosContacts />
-      </Icons>
-    ),
-    items: [],
-  },
-];
+export const services: DefaultOptionType = {
+  id: 1,
+  label: "Services",
+  icon: (
+    <Icons>
+      <FaServicestack className=" fill-inherit text-inherit" />
+    </Icons>
+  ),
+  items: [
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <MdElectricBolt />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Electrical Engineering
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "1",
+    },
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <GiMechanicalArm />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Mechanical Engineering
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "2",
+    },
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <SiInstructure />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Structural Engineering
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "3",
+    },
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <SiBmcsoftware />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Software Development
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "4",
+    },
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <GiRollingEnergy />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Energy Services
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "5",
+    },
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <GrTechnology />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Technology
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "6",
+    },
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <MdPrecisionManufacturing />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Manufacturing
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "7",
+    },
+  ],
+};
+
+export const portfolio: DefaultOptionType = {
+  id: 2,
+  label: "Portfolio",
+  icon: (
+    <Icons>
+      <TbFileDescription />
+    </Icons>
+  ),
+  items: [
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <RiProjectorFill />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Projects
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "1",
+    },
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <GrUserExpert />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Experts
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "2",
+    },
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <SiCoinmarketcap />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Markets
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "3",
+    },
+  ],
+};
+export const people: HomepageData = {
+  id: 3,
+  label: "People",
+  icon: (
+    <Icons>
+      <IoIosPeople />
+    </Icons>
+  ),
+  items: [
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <RiProjectorFill />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Careers
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "1",
+    },
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <GrUserExpert />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Continue Education
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "2",
+    },
+  ],
+};
+export const about: DefaultOptionType = {
+  id: 4,
+  label: "About Us",
+  icon: (
+    <Icons>
+      <TbArrowRoundaboutRight />
+    </Icons>
+  ),
+
+  items: [
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <MdOutlineAgriculture />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Culture
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "1",
+    },
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <TbNews />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              News
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "2",
+    },
+    {
+      label: (
+        <Card>
+          <Flex gap="middle" align="center">
+            <SiEventstore />
+            <Typography.Text style={{ fontWeight: "bolder" }}>
+              Events
+            </Typography.Text>
+          </Flex>
+        </Card>
+      ),
+      key: "3",
+    },
+  ],
+};
+export const contact: DefaultOptionType = {
+  id: 5,
+  label: "Contact Us",
+  icon: (
+    <Icons>
+      <IoIosContacts />
+    </Icons>
+  ),
+};
 
 export const items: MenuProps["items"] = [
   {

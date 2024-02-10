@@ -7,16 +7,21 @@ import type { DropdownProps, MenuProps } from "antd";
 import { useState } from "react";
 import { useMemo } from "react";
 const color1 = "#1b1247";
+import { DefaultOptionType } from "antd/es/select";
 const color2 = "#efc75e";
 import Main from "../../../../assets/Images/main7.png";
 import { items } from "../../utills/data";
 const rootSubmenuKeys = ["1"];
 interface NavContentProps {
-  navData: HomepageData[];
+  isOpen?: boolean;
+  setIsOpen?: (val: boolean) => void;
+  navData?: HomepageData | DefaultOptionType;
   menuActive: boolean;
   setMenuActive: (val: boolean) => void;
 }
 const NavContent: React.FC<NavContentProps> = ({
+  isOpen,
+  setIsOpen,
   navData,
   menuActive,
   setMenuActive,
@@ -33,7 +38,7 @@ const NavContent: React.FC<NavContentProps> = ({
     }
   };
   const placement: DrawerProps["placement"] = useMemo(() => "right", []);
-  const [open, setOpen] = useState(false);
+
   const [isMobile, isLowTab, isPotraitTab, isDesktopOrLaptop] = useScreens();
   const handleDrawerClose = () => {
     setMenuActive(false);
@@ -47,7 +52,7 @@ const NavContent: React.FC<NavContentProps> = ({
 
   const handleOpenChange: DropdownProps["onOpenChange"] = (nextOpen, info) => {
     if (info.source === "trigger" || nextOpen) {
-      setOpen(nextOpen);
+      setIsOpen && setIsOpen(nextOpen);
     }
   };
 
@@ -101,42 +106,47 @@ const NavContent: React.FC<NavContentProps> = ({
           </div>
         </Drawer>
       )}
-      {isDesktopOrLaptop &&
-        navData.map((data, index) => (
-          <Flex
-            key={data.id}
-            gap="middle"
-            style={{
-              padding: token.paddingXS,
-              cursor: "pointer",
-            }}
-            align="center"
-          >
-            {data.icon}
-
+      {isDesktopOrLaptop && (
+        <Flex
+          gap="middle"
+          style={{
+            padding: token.paddingXS,
+            cursor: "pointer",
+          }}
+          align="center"
+        >
+          {navData!.icon}
+          {navData && navData.items !== null ? (
             <Dropdown
-              overlayStyle={{ backgroundColor: "red" }}
-              key={index}
               menu={{
-                items: data.items,
+                items: navData!.items,
                 onClick: handleMenuClick,
                 style: {
-                  width: "700px",
-                  height: "300px",
-                  backgroundColor: "red",
+                  width: "400px",
+                  maxHeight: "300px",
+                  overflowX: "hidden",
+                  overflowY: "scroll",
                 },
               }}
+              arrow
               onOpenChange={handleOpenChange}
-              open={open}
+              open={isOpen}
             >
               <Typography.Text
                 style={{ color: color1, fontWeight: token.fontWeightStrong }}
               >
-                {data.label}
+                {navData?.label}
               </Typography.Text>
             </Dropdown>
-          </Flex>
-        ))}
+          ) : (
+            <Typography.Text
+              style={{ color: color1, fontWeight: token.fontWeightStrong }}
+            >
+              {navData?.label}
+            </Typography.Text>
+          )}
+        </Flex>
+      )}
     </Flex>
   );
 };

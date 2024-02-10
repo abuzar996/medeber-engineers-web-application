@@ -8,5 +8,5 @@ export interface HomepageData {
   id: number;
   label: string;
   icon: ReactNode;
-  items: MenuProps["items"];
+  items?: MenuProps["items"];
 }
