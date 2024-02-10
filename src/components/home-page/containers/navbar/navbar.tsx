@@ -8,7 +8,7 @@ const color1 = "#1b1247";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 import Icons from "./icons";
-
+import { useScreens } from "../../../../hooks/useScreen";
 //const color2 = "#efc75e";
 
 const NavBar = () => {
@@ -17,11 +17,12 @@ const NavBar = () => {
   const handleMenuClicked = () => {
     setMenuActive((menuActive) => !menuActive);
   };
+  const [isMobile, isLowTab, isPotraitTab, isDesktopOrLaptop] = useScreens();
   return (
     <Flex
       flex="1"
       justify="space-between"
-      className="h-fit"
+      className=" h-fit "
       style={{
         backgroundColor: "transparent",
         padding: token.paddingXS,
@@ -39,37 +40,50 @@ const NavBar = () => {
           style={{ width: "40px", height: "40px", borderRadius: "50%" }}
         />
 
-        <Typography.Text
-          style={{
-            color: color1,
-            fontWeight: token.fontWeightStrong,
-            fontSize: token.fontSizeHeading5,
-            textDecoration: "underline",
-            cursor: "pointer",
-          }}
-          className="xs:max-sm:hidden"
-        >
-          {FIRMNAME.NAME}
-        </Typography.Text>
+        {!isMobile && (
+          <Typography.Text
+            style={{
+              color: color1,
+              fontWeight: token.fontWeightStrong,
+              fontSize: token.fontSizeHeading5,
+              textDecoration: "underline",
+              cursor: "pointer",
+            }}
+          >
+            {FIRMNAME.NAME}
+          </Typography.Text>
+        )}
       </Flex>
 
-      <Flex justify="space-around" flex={1}>
-        <NavContent navData={navContentA} menuActive={menuActive} />
-      </Flex>
-      <Flex
-        flex="1"
-        className="justify-center xs:max-md:justify-end xs:max-md:pr-[10px]"
-      >
+      {((!isMobile && !isLowTab && !isPotraitTab && isDesktopOrLaptop) ||
+        menuActive) && (
+        <Flex justify="space-around" flex="1">
+          <NavContent
+            navData={navContentA}
+            menuActive={menuActive}
+            setMenuActive={setMenuActive}
+          />
+        </Flex>
+      )}
+      <Flex flex="1" justify="center">
         <NavBarSearch />
       </Flex>
-      <Flex justify="space-around" flex="1">
-        <NavContent navData={navContentB} menuActive={menuActive} />
-      </Flex>
-      <Flex justify="flex-end" align="center" className="md:hidden">
-        <Icons>
-          <RxHamburgerMenu onClick={handleMenuClicked} />
-        </Icons>
-      </Flex>
+      {!isMobile && !isLowTab && !isPotraitTab && isDesktopOrLaptop && (
+        <Flex justify="space-around" flex="1">
+          <NavContent
+            navData={navContentB}
+            menuActive={menuActive}
+            setMenuActive={setMenuActive}
+          />
+        </Flex>
+      )}
+      {(isMobile || isLowTab || isPotraitTab) && (
+        <Flex justify="flex-end" align="center">
+          <Icons>
+            <RxHamburgerMenu onClick={handleMenuClicked} />
+          </Icons>
+        </Flex>
+      )}
     </Flex>
   );
 };
