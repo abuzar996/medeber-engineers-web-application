@@ -12,6 +12,7 @@ const color2 = "#efc75e";
 import Main from "../../../../assets/Images/main7.png";
 import { items } from "../../utills/data";
 const rootSubmenuKeys = ["1"];
+import "../../layout/scroll.css";
 interface NavContentProps {
   isOpen?: boolean;
   setIsOpen?: (val: boolean) => void;
@@ -118,9 +119,11 @@ const NavContent: React.FC<NavContentProps> = ({
           {navData!.icon}
           {navData && navData.items !== null ? (
             <Dropdown
+              getPopupContainer={(trigger) => trigger}
               menu={{
                 items: navData!.items,
                 onClick: handleMenuClick,
+                id: "element",
                 style: {
                   width: "400px",
                   maxHeight: "300px",

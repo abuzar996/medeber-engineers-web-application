@@ -10,6 +10,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 import Icons from "./icons";
 import { useScreens } from "../../../../hooks/useScreen";
+//import { useEffect } from "react";
 //const color2 = "#efc75e";
 
 const NavBar = () => {
@@ -32,11 +33,6 @@ const NavBar = () => {
       style={{
         backgroundColor: "transparent",
         padding: token.paddingXS,
-        position: "sticky",
-        zIndex: 1,
-        top: 0,
-        left: 0,
-        right: 0,
       }}
     >
       <Flex align="center" gap="small">

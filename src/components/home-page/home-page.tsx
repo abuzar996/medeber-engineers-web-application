@@ -1,6 +1,12 @@
-import NavBar from "./containers/navbar/navbar";
-
+import HomePageLayout from "./layout/home-page-layout";
+import { Flex } from "antd";
 const HomePage = () => {
-  return <NavBar />;
+  return (
+    <HomePageLayout>
+      <Flex vertical>
+        <div className="h-[900px]">Hello world</div>
+      </Flex>
+    </HomePageLayout>
+  );
 };
 export default HomePage;
