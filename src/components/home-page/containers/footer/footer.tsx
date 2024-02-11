@@ -1,5 +1,6 @@
 import { Flex, theme, Typography, Divider, ConfigProvider } from "antd";
 import { items } from "../../utills/data";
+
 import { DefaultOptionType } from "antd/es/select";
 import Logo from "../../../../assets/Images/medeber.png";
 import { CiInstagram, CiFacebook, CiYoutube, CiTwitter } from "react-icons/ci";
@@ -14,7 +15,7 @@ const Footer = () => {
     <Flex
       flex="1"
       vertical
-      className="bg-gradient-to-r from-blue-500 to-[#1b1247] xs:max-sm:items-center "
+      className="bg-gradient-to-r from-blue-500 to-[#1b1247] xs:max-md:items-center"
     >
       <Flex
         flex="1"
@@ -24,7 +25,7 @@ const Footer = () => {
         align="center"
         vertical
       >
-        <Flex className="w-[90%] xs:max-sm:w-full" vertical>
+        <Flex className="w-[90%] xs:max-md:w-full" vertical>
           <Flex flex={1} vertical>
             <Flex align="center" gap="middle">
               <img
@@ -49,7 +50,7 @@ const Footer = () => {
             flex="1"
             justify="center"
             style={{ padding: token.paddingLG }}
-            className="xs:max-sm:flex-col xs:max-sm:items-start xs:max-sm:gap-4"
+            className="xs:max-md:flex-col xs:max-md:items-start xs:max-md:gap-4"
           >
             {items &&
               footerItems.map((item) => (
@@ -58,13 +59,13 @@ const Footer = () => {
                   justify="space-around"
                   gap="middle"
                   flex="1"
-                  className="xs:max-sm:w-full"
+                  className="xs:max-md:w-full"
                 >
-                  <Flex vertical gap="small" className="xs:max-sm:w-full">
+                  <Flex vertical gap="small" className="xs:max-md:w-full">
                     <Flex
                       align="center"
                       gap="small"
-                      className="xs:max-sm:justify-center xs:max-sm:w-full"
+                      className="xs:max-md:justify-center xs:max-md:w-full"
                     >
                       {item.icon}
                       <Typography.Text
@@ -133,7 +134,7 @@ const Footer = () => {
         <Divider style={{ padding: 0 }} />
       </ConfigProvider>
       <Flex flex="1" justify="center">
-        <Flex className="w-[90%] xs:max-sm:w-full" justify="center">
+        <Flex className="w-[90%] xs:max-md:w-full" justify="center">
           <Flex
             gap="middle"
             style={{ padding: token.paddingSM }}

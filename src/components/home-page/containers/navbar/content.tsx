@@ -9,6 +9,7 @@ import {
   ConfigProvider,
 } from "antd";
 import { useScreens } from "../../../../hooks/useScreen";
+import { FaChevronDown } from "react-icons/fa";
 import type { DrawerProps } from "antd";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import type { DropdownProps, MenuProps } from "antd";
@@ -130,13 +131,12 @@ const NavContent: React.FC<NavContentProps> = ({
               theme={{
                 components: {
                   Dropdown: {
-                    colorBgElevated: "#3b82f6",
+                    colorBgElevated: navData.id !== 4 ? "#3b82f6" : "#1b1247",
                   },
                 },
               }}
             >
               <Dropdown
-                getPopupContainer={(trigger) => trigger}
                 menu={{
                   items: navData!.items,
                   onClick: handleMenuClick,
@@ -154,11 +154,17 @@ const NavContent: React.FC<NavContentProps> = ({
                 onOpenChange={handleOpenChange}
                 open={isOpen}
               >
-                <Typography.Text
-                  style={{ color: color1, fontWeight: token.fontWeightStrong }}
-                >
-                  {navData?.label}
-                </Typography.Text>
+                <Flex align="center" gap="middle">
+                  <Typography.Text
+                    style={{
+                      color: color1,
+                      fontWeight: token.fontWeightStrong,
+                    }}
+                  >
+                    {navData?.label}
+                  </Typography.Text>
+                  {navData!.items && <FaChevronDown />}
+                </Flex>
               </Dropdown>
             </ConfigProvider>
           ) : (
