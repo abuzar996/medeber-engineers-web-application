@@ -1,5 +1,9 @@
 import Icons from "../containers/navbar/icons";
 
+import Project1 from "../../../assets/Images/project1.png";
+import Project2 from "../../../assets/Images/project2.png";
+import Project3 from "../../../assets/Images/project3.png";
+
 import { Flex, Card, Typography } from "antd";
 import { DefaultOptionType } from "antd/es/select";
 import { HomepageData } from "../types";
@@ -384,5 +388,25 @@ export const items: MenuProps["items"] = [
     key: "5",
     label: "Contact Us",
     icon: <IoIosContacts className="text-[#efc75e]" />,
+  },
+];
+export const projectData = [
+  {
+    id: 1,
+    name: "Website Application Development",
+    image: Project1,
+    desc: "Develoement of website application for bussiness growth and representation",
+  },
+  {
+    id: 2,
+    name: "Mobile Application Development",
+    image: Project2,
+    desc: "Development of mobile application for bussiness growth and representation",
+  },
+  {
+    id: 3,
+    name: "Desktop Application Development",
+    image: Project3,
+    desc: "Development of desktop application for bussiness growth and representation",
   },
 ];
