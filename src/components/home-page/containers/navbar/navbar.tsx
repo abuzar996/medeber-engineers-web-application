@@ -4,13 +4,13 @@ import MedeberLogo from "../../../../assets/Images/medeber.png";
 import { FIRMNAME } from "../../types";
 import { services, portfolio, people, contact, about } from "../../utills/data";
 import NavBarSearch from "./search";
+import Header from "../../../../assets/Images/header.png";
 
 const color1 = "#1b1247";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 import Icons from "./icons";
 import { useScreens } from "../../../../hooks/useScreen";
-//import { useEffect } from "react";
 //const color2 = "#efc75e";
 
 const NavBar = () => {
@@ -31,8 +31,13 @@ const NavBar = () => {
       justify="space-between"
       className=" h-fit "
       style={{
-        backgroundColor: "transparent",
+        backgroundImage: `url(${Header})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
         padding: token.paddingXS,
+        maxHeight: "fit-content",
+        boxShadow: "rgba(149, 157, 165, 0.6) 0px 0px 18px",
       }}
     >
       <Flex align="center" gap="small">

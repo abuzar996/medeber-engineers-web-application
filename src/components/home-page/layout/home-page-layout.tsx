@@ -7,24 +7,26 @@ interface HomePageLayoutProps {
 import "./scroll.css";
 const HomePageLayout: React.FC<HomePageLayoutProps> = ({ children }) => {
   return (
-    <div className="no-scrollbar" id="element">
+    <Flex vertical style={{ height: "100vh" }}>
       <Flex
-        flex="1"
         style={{
-          height: "fit-content",
-          position: "fixed",
-          zIndex: 10000,
-          top: "0",
-          left: "0",
-          right: "0",
+          maxHeight: "fit-content",
         }}
       >
         <NavBar />
       </Flex>
-      <Flex flex="1" style={{ position: "relative", top: "55px" }}>
+      <Flex
+        flex="1"
+        id="element"
+        style={{
+          height: "calc(100vh - 55px)",
+          overflowY: "scroll",
+          scrollBehavior: "smooth",
+        }}
+      >
         {children}
       </Flex>
-    </div>
+    </Flex>
   );
 };
 
