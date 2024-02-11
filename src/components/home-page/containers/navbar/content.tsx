@@ -18,7 +18,6 @@ import { useMemo } from "react";
 const color1 = "#1b1247";
 import { DefaultOptionType } from "antd/es/select";
 //const color2 = "#efc75e";
-import Main from "../../../../assets/Images/main7.png";
 import { items } from "../../utills/data";
 const rootSubmenuKeys = ["1"];
 import "../../layout/scroll.css";
@@ -72,7 +71,7 @@ const NavContent: React.FC<NavContentProps> = ({
         <Drawer
           styles={{
             content: {
-              backgroundImage: `url(${Main})`,
+              backgroundImage: `linear-gradient(to right,  #3b82f6 ,#1b1247)`,
             },
           }}
           title={
@@ -80,6 +79,7 @@ const NavContent: React.FC<NavContentProps> = ({
               <Typography.Text
                 style={{
                   fontSize: token.fontSizeHeading4,
+                  color: "#efc75e",
                 }}
               >
                 Menu
@@ -93,7 +93,9 @@ const NavContent: React.FC<NavContentProps> = ({
               </Typography.Text>
             </Flex>
           }
-          closeIcon={<IoMdCloseCircleOutline />}
+          closeIcon={
+            <IoMdCloseCircleOutline size={25} className="fill-[#efc75e]" />
+          }
           placement={placement}
           closable={true}
           onClose={handleDrawerClose}
@@ -107,7 +109,7 @@ const NavContent: React.FC<NavContentProps> = ({
               style={{
                 background: "transparent",
                 fontWeight: token.fontWeightStrong,
-                color: token.colorBgBase,
+                color: "#efc75e",
               }}
               mode="inline"
               openKeys={openKeys}

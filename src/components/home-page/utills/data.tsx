@@ -287,37 +287,37 @@ export const items: MenuProps["items"] = [
       {
         key: "11",
         label: "Electrical Engineering",
-        icon: <MdElectricBolt />,
+        icon: <MdElectricBolt className="fill-[#efc75e]" />,
       },
       {
         key: "12",
         label: "Mechanical Engineering",
-        icon: <GiMechanicalArm />,
+        icon: <GiMechanicalArm className="fill-[#efc75e]" />,
       },
       {
         key: "13",
         label: "Structural Engineering",
-        icon: <SiInstructure />,
+        icon: <SiInstructure className="fill-[#efc75e]" />,
       },
       {
         key: "14",
         label: "Software Development",
-        icon: <SiBmcsoftware />,
+        icon: <SiBmcsoftware className="fill-[#efc75e]" />,
       },
       {
         key: "15",
         label: "Energy Services",
-        icon: <GiRollingEnergy />,
+        icon: <GiRollingEnergy className="fill-[#efc75e]" />,
       },
       {
         key: "16",
         label: "Technology",
-        icon: <GrTechnology />,
+        icon: <GrTechnology className="fill-[#efc75e]" />,
       },
       {
         key: "17",
         label: "Manufacturing",
-        icon: <MdPrecisionManufacturing />,
+        icon: <MdPrecisionManufacturing className="fill-[#efc75e]" />,
       },
     ],
   },
@@ -327,9 +327,21 @@ export const items: MenuProps["items"] = [
     icon: <TbFileDescription />,
     style: { color: "#ffffff" },
     children: [
-      { key: "21", label: "Projects", icon: <RiProjectorFill /> },
-      { key: "22", label: "Experts", icon: <GrUserExpert /> },
-      { key: "23", label: "Markets", icon: <SiCoinmarketcap /> },
+      {
+        key: "21",
+        label: "Projects",
+        icon: <RiProjectorFill className="fill-[#efc75e]" />,
+      },
+      {
+        key: "22",
+        label: "Experts",
+        icon: <GrUserExpert className="fill-[#efc75e]" />,
+      },
+      {
+        key: "23",
+        label: "Markets",
+        icon: <SiCoinmarketcap className="fill-[#efc75e]" />,
+      },
     ],
   },
   {
@@ -337,24 +349,40 @@ export const items: MenuProps["items"] = [
     label: "People",
     icon: <IoIosPeople />,
     children: [
-      { key: "31", label: "Careers", icon: <RiProjectorFill /> },
-      { key: "32", label: "Continue Education", icon: <MdCastForEducation /> },
+      {
+        key: "31",
+        label: "Careers",
+        icon: <RiProjectorFill className="fill-[#efc75e]" />,
+      },
+      {
+        key: "32",
+        label: "Continue Education",
+        icon: <MdCastForEducation className="fill-[#efc75e]" />,
+      },
     ],
   },
   {
     key: "4",
     label: "About Us",
-    icon: <TbArrowRoundaboutRight />,
+    icon: <TbArrowRoundaboutRight className="text-[#efc75e]" />,
     children: [
-      { key: "41", label: "Culture", icon: <MdOutlineAgriculture /> },
-      { key: "42", label: "News", icon: <TbNews /> },
+      {
+        key: "41",
+        label: "Culture",
+        icon: <MdOutlineAgriculture className="text-[#efc75e]" />,
+      },
+      { key: "42", label: "News", icon: <TbNews className="fill-[#efc75e]" /> },
 
-      { key: "43", label: "Events", icon: <SiEventstore /> },
+      {
+        key: "43",
+        label: "Events",
+        icon: <SiEventstore className="fill-[#efc75e]" />,
+      },
     ],
   },
   {
     key: "5",
     label: "Contact Us",
-    icon: <IoIosContacts />,
+    icon: <IoIosContacts className="text-[#efc75e]" />,
   },
 ];
