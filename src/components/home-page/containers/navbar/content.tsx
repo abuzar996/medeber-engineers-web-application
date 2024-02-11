@@ -1,5 +1,13 @@
 import { HomepageData } from "../../types";
-import { theme, Flex, Typography, Drawer, Dropdown, Menu } from "antd";
+import {
+  theme,
+  Flex,
+  Typography,
+  Drawer,
+  Dropdown,
+  Menu,
+  ConfigProvider,
+} from "antd";
 import { useScreens } from "../../../../hooks/useScreen";
 import type { DrawerProps } from "antd";
 import { IoMdCloseCircleOutline } from "react-icons/io";
@@ -118,29 +126,41 @@ const NavContent: React.FC<NavContentProps> = ({
         >
           {navData!.icon}
           {navData && navData.items !== null ? (
-            <Dropdown
-              getPopupContainer={(trigger) => trigger}
-              menu={{
-                items: navData!.items,
-                onClick: handleMenuClick,
-                id: "element",
-                style: {
-                  width: "400px",
-                  maxHeight: "300px",
-                  overflowX: "hidden",
-                  overflowY: "scroll",
+            <ConfigProvider
+              theme={{
+                components: {
+                  Dropdown: {
+                    colorBgElevated: "#3b82f6",
+                  },
                 },
               }}
-              arrow
-              onOpenChange={handleOpenChange}
-              open={isOpen}
             >
-              <Typography.Text
-                style={{ color: color1, fontWeight: token.fontWeightStrong }}
+              <Dropdown
+                getPopupContainer={(trigger) => trigger}
+                menu={{
+                  items: navData!.items,
+                  onClick: handleMenuClick,
+                  id: "element",
+                  style: {
+                    width: "400px",
+                    maxHeight: "300px",
+                    overflowX: "hidden",
+                    overflowY: "scroll",
+                    backgroundImage: `linear-gradient(to right,  #3b82f6 ,#1b1247)`,
+                  },
+                }}
+                destroyPopupOnHide
+                arrow
+                onOpenChange={handleOpenChange}
+                open={isOpen}
               >
-                {navData?.label}
-              </Typography.Text>
-            </Dropdown>
+                <Typography.Text
+                  style={{ color: color1, fontWeight: token.fontWeightStrong }}
+                >
+                  {navData?.label}
+                </Typography.Text>
+              </Dropdown>
+            </ConfigProvider>
           ) : (
             <Typography.Text
               style={{ color: color1, fontWeight: token.fontWeightStrong }}
