@@ -4,9 +4,9 @@ import MedeberLogo from "../../../../assets/Images/medeber.png";
 import { FIRMNAME } from "../../types";
 import { services, portfolio, people, contact, about } from "../../utills/data";
 import NavBarSearch from "./search";
-import Header from "../../../../assets/Images/header.png";
+//import Header from "../../../../assets/Images/header2.png";
 
-const color1 = "#1b1247";
+//const color1 = "#1b1247";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 import Icons from "./icons";
@@ -31,10 +31,7 @@ const NavBar = () => {
       justify="space-between"
       className=" h-fit "
       style={{
-        backgroundImage: `url(${Header})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
+        backgroundImage: `linear-gradient(to right,  #3b82f6 ,#1b1247)`,
         padding: token.paddingXS,
         maxHeight: "fit-content",
         boxShadow: "rgba(149, 157, 165, 0.6) 0px 0px 18px",
@@ -50,7 +47,7 @@ const NavBar = () => {
         {!isMobile && (
           <Typography.Text
             style={{
-              color: color1,
+              color: "#efc75e",
               fontWeight: token.fontWeightStrong,
               fontSize: token.fontSizeHeading5,
               textDecoration: "underline",

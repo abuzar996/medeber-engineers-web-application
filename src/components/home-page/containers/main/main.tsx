@@ -1,7 +1,7 @@
 import { Button, Carousel, Flex, Typography, theme } from "antd";
 import Main from "../../../../assets/Images/main.png";
-import Main1 from "../../../../assets/Images/main2.png";
-import Main2 from "../../../../assets/Images/main3.png";
+import Main1 from "../../../../assets/Images/main8.png";
+import Main2 from "../../../../assets/Images/corporate9.png";
 import "../../layout/scroll.css";
 
 const MainView = () => {
@@ -50,11 +50,11 @@ const MainView = () => {
 
   return (
     <Carousel autoplay autoplaySpeed={2000} effect="fade" dots={false}>
-      <Flex flex="1" vertical>
+      <Flex flex="1" vertical gap="large">
         <h1 style={contentStyle}>
           <Flex>
-            <span className="text-[#1b1247] text-3xl">MEDEBER </span>{" "}
-            <span className="text-[#efc75e] ml-[10px] text-3xl">
+            <span className="text-[#1b1247] text-4xl">MEDEBER </span>{" "}
+            <span className="text-[#efc75e] ml-[10px] text-4xl">
               ENGINEERS.
             </span>
           </Flex>
@@ -90,19 +90,18 @@ const MainView = () => {
           </Flex>
         </h1>
       </Flex>
-      <Flex flex="1" vertical>
+      <Flex flex="1" vertical gap="middle">
         <h1 style={contentStyle2}>
           <Flex>
-            <span className="text-[#1b1247] text-3xl">MEDEBER </span>{" "}
-            <span className="text-[#efc75e] ml-[10px] text-3xl">
+            <span className="text-[#1b1247] text-4xl">MEDEBER </span>{" "}
+            <span className="text-[#efc75e] ml-[10px] text-4xl">
               ENGINEERS.
             </span>
           </Flex>
-          <Flex gap="middle">
+          <Flex gap="large">
             <Button
               style={{
                 backgroundColor: "#efc75e",
-
                 borderColor: "#efc75e",
               }}
               size="large"
@@ -116,7 +115,6 @@ const MainView = () => {
             <Button
               style={{
                 backgroundColor: "#121b47",
-
                 borderColor: "#121b47",
               }}
               size="large"
@@ -130,11 +128,11 @@ const MainView = () => {
           </Flex>
         </h1>
       </Flex>
-      <Flex flex="1" vertical>
+      <Flex flex="1" vertical gap="large">
         <h1 style={contentStyle3}>
           <Flex>
-            <span className="text-[#1b1247] text-3xl">MEDEBER </span>{" "}
-            <span className="text-[#efc75e] ml-[10px] text-3xl">
+            <span className="text-[#ffff] text-4xl">MEDEBER </span>{" "}
+            <span className="text-[#efc75e] ml-[10px] text-4xl">
               ENGINEERS.
             </span>
           </Flex>

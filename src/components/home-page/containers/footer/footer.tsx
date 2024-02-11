@@ -7,7 +7,6 @@ import { CiInstagram, CiFacebook, CiYoutube, CiTwitter } from "react-icons/ci";
 import { LuCopyright } from "react-icons/lu";
 
 import { FIRMNAME } from "../../types";
-const color1 = "#1b1247";
 const Footer = () => {
   const { token } = theme.useToken();
   const footerItems = items as DefaultOptionType[];
@@ -35,7 +34,7 @@ const Footer = () => {
 
               <Typography.Text
                 style={{
-                  color: color1,
+                  color: "#efc75e",
                   fontWeight: token.fontWeightStrong,
                   fontSize: token.fontSizeHeading5,
                   textDecoration: "underline",
@@ -65,11 +64,12 @@ const Footer = () => {
                     <Flex
                       align="center"
                       gap="small"
-                      className="xs:max-md:justify-center xs:max-md:w-full"
+                      className="xs:max-md:justify-center xs:max-md:w-full text-[#efc75e]"
                     >
                       {item.icon}
                       <Typography.Text
                         style={{
+                          color: "#efc75e",
                           fontSize: token.fontSizeHeading5,
                           fontWeight: token.fontWeightStrong,
                         }}
@@ -84,12 +84,12 @@ const Footer = () => {
                           <Flex
                             key={child.key}
                             justify="flex-start"
-                            className="cursor-pointer hover:underline py-[2px] hover:text-[white]"
+                            className="cursor-pointer hover:underline py-[2px] hover:text-[white] text-[#efc75e]"
                             gap="small"
                           >
                             <div>{child.icon}</div>
                             <Typography
-                              className="hover:text-[#fff]"
+                              className="hover:text-[#fff] text-[#efc75e]"
                               style={{
                                 fontSize: token.fontSizeSM,
                               }}
@@ -106,12 +106,21 @@ const Footer = () => {
                           gap="middle"
                         >
                           <CiInstagram
-                            className="hover:fill-[blue]"
+                            className="hover:fill-[#fff] fill-[#efc75e]"
                             size="22"
                           />
-                          <CiFacebook className="hover:fill-[blue]" size="22" />
-                          <CiYoutube className="hover:fill-[blue]" size="22" />
-                          <CiTwitter className="hover:fill-[blue]" size="22" />
+                          <CiFacebook
+                            className="hover:fill-[#fff] fill-[#efc75e]"
+                            size="22"
+                          />
+                          <CiYoutube
+                            className="hover:fill-[#fff] fill-[#efc75e]"
+                            size="22"
+                          />
+                          <CiTwitter
+                            className="hover:fill-[#fff] fill-[#efc75e]"
+                            size="22"
+                          />
                         </Flex>
                       )}
                     </Flex>

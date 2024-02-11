@@ -32,16 +32,16 @@ export const services: DefaultOptionType = {
   label: "Services",
   icon: (
     <Icons>
-      <FaServicestack className=" fill-inherit text-inherit" />
+      <FaServicestack />
     </Icons>
   ),
   items: [
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <MdElectricBolt className="fill-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <MdElectricBolt className="fill-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Electrical Engineering
             </Typography.Text>
           </Flex>
@@ -51,10 +51,10 @@ export const services: DefaultOptionType = {
     },
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <GiMechanicalArm className="fill-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <GiMechanicalArm className="fill-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Mechanical Engineering
             </Typography.Text>
           </Flex>
@@ -64,10 +64,10 @@ export const services: DefaultOptionType = {
     },
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <SiInstructure className="fill-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <SiInstructure className="fill-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Structural Engineering
             </Typography.Text>
           </Flex>
@@ -77,10 +77,10 @@ export const services: DefaultOptionType = {
     },
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <SiBmcsoftware className="fill-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <SiBmcsoftware className="fill-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Software Development
             </Typography.Text>
           </Flex>
@@ -90,10 +90,10 @@ export const services: DefaultOptionType = {
     },
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <GiRollingEnergy className="fill-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <GiRollingEnergy className="fill-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Energy Services
             </Typography.Text>
           </Flex>
@@ -103,10 +103,10 @@ export const services: DefaultOptionType = {
     },
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <GrTechnology className="fill-whit text-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <GrTechnology className="fill-whit text-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Technology
             </Typography.Text>
           </Flex>
@@ -116,10 +116,10 @@ export const services: DefaultOptionType = {
     },
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <MdPrecisionManufacturing className="fill-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <MdPrecisionManufacturing className="fill-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Manufacturing
             </Typography.Text>
           </Flex>
@@ -141,10 +141,10 @@ export const portfolio: DefaultOptionType = {
   items: [
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <RiProjectorFill className="fill-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <RiProjectorFill className="fill-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Projects
             </Typography.Text>
           </Flex>
@@ -154,10 +154,10 @@ export const portfolio: DefaultOptionType = {
     },
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <GrUserExpert className="fill-white text-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <GrUserExpert className="fill-[#efc75e] text-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Experts
             </Typography.Text>
           </Flex>
@@ -167,10 +167,10 @@ export const portfolio: DefaultOptionType = {
     },
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <SiCoinmarketcap className="fill-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <SiCoinmarketcap className="fill-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Markets
             </Typography.Text>
           </Flex>
@@ -191,10 +191,10 @@ export const people: HomepageData = {
   items: [
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <RiProjectorFill className="fill-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <RiProjectorFill className="fill-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Careers
             </Typography.Text>
           </Flex>
@@ -204,10 +204,10 @@ export const people: HomepageData = {
     },
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <GrUserExpert className="fill-white text-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <GrUserExpert className="fill-[#efc75e] text-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Continue Education
             </Typography.Text>
           </Flex>
@@ -229,10 +229,10 @@ export const about: DefaultOptionType = {
   items: [
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <MdOutlineAgriculture className="fill-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <MdOutlineAgriculture className="fill-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Culture
             </Typography.Text>
           </Flex>
@@ -242,10 +242,10 @@ export const about: DefaultOptionType = {
     },
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <TbNews className="text-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <TbNews className="text-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               News
             </Typography.Text>
           </Flex>
@@ -255,10 +255,10 @@ export const about: DefaultOptionType = {
     },
     {
       label: (
-        <Card style={{ background: "transparent" }}>
+        <Card style={{ background: "transparent", borderColor: "#efc75e" }}>
           <Flex gap="middle" align="center">
-            <SiEventstore className="fill-white" />
-            <Typography.Text style={{ fontWeight: "bolder", color: "white" }}>
+            <SiEventstore className="fill-[#efc75e]" />
+            <Typography.Text style={{ fontWeight: "bolder", color: "#efc75e" }}>
               Events
             </Typography.Text>
           </Flex>

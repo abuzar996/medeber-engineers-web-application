@@ -1,6 +1,6 @@
 import { Flex, theme, ConfigProvider, Input } from "antd";
 import Icons from "./icons";
-const color1 = "#1b1247";
+//const color1 = "#1b1247";
 import { CiSearch } from "react-icons/ci";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 
@@ -28,9 +28,9 @@ const NavBarSearch: React.FC<SearchProps> = () => {
               Input: {
                 activeBg: "transparent",
                 hoverBg: "transparent",
-                activeBorderColor: color1,
-                colorTextPlaceholder: color1,
-                hoverBorderColor: color1,
+                activeBorderColor: "#efc75e",
+                colorTextPlaceholder: "#efc75e",
+                hoverBorderColor: "#efc75e",
               },
             },
           }}
@@ -39,10 +39,10 @@ const NavBarSearch: React.FC<SearchProps> = () => {
             className={`bg-transparent`}
             placeholder="Search"
             style={{
-              color: color1,
+              color: "#efc75e",
               borderRadius: "15px",
               width: "100%",
-              borderColor: color1,
+              borderColor: "#efc75e",
             }}
             allowClear={true}
             prefix={

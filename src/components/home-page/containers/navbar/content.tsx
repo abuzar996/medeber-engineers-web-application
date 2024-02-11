@@ -17,7 +17,7 @@ import { useState } from "react";
 import { useMemo } from "react";
 const color1 = "#1b1247";
 import { DefaultOptionType } from "antd/es/select";
-const color2 = "#efc75e";
+//const color2 = "#efc75e";
 import Main from "../../../../assets/Images/main7.png";
 import { items } from "../../utills/data";
 const rootSubmenuKeys = ["1"];
@@ -89,7 +89,7 @@ const NavContent: React.FC<NavContentProps> = ({
           footer={
             <Flex justify="center">
               <Typography.Text>
-                <span style={{ color: color2 }}>M.E.D.E.B.E.R</span>
+                <span style={{ color: "white" }}>M.E.D.E.B.E.R</span>
               </Typography.Text>
             </Flex>
           }
@@ -137,6 +137,7 @@ const NavContent: React.FC<NavContentProps> = ({
               }}
             >
               <Dropdown
+                overlayStyle={{ padding: 20 }}
                 menu={{
                   items: navData!.items,
                   onClick: handleMenuClick,
@@ -157,13 +158,15 @@ const NavContent: React.FC<NavContentProps> = ({
                 <Flex align="center" gap="middle">
                   <Typography.Text
                     style={{
-                      color: color1,
+                      color: "#efc75e",
                       fontWeight: token.fontWeightStrong,
                     }}
                   >
                     {navData?.label}
                   </Typography.Text>
-                  {navData!.items && <FaChevronDown />}
+                  {navData!.items && (
+                    <FaChevronDown className="fill-[#efc75e]" />
+                  )}
                 </Flex>
               </Dropdown>
             </ConfigProvider>
