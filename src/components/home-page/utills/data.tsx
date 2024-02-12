@@ -286,7 +286,7 @@ export const items: MenuProps["items"] = [
   {
     key: "1",
     label: "Services",
-    icon: <FaServicestack />,
+    icon: <FaServicestack className="fill-[#efc75e]" />,
     children: [
       {
         key: "11",
@@ -316,7 +316,7 @@ export const items: MenuProps["items"] = [
       {
         key: "16",
         label: "Technology",
-        icon: <GrTechnology className="fill-[#efc75e]" />,
+        icon: <GrTechnology className="text-[#efc75e]" />,
       },
       {
         key: "17",
@@ -328,18 +328,18 @@ export const items: MenuProps["items"] = [
   {
     key: "2",
     label: "Portfolio",
-    icon: <TbFileDescription />,
+    icon: <TbFileDescription style={{ color: "#efc75e" }} />,
     style: { color: "#ffffff" },
     children: [
       {
         key: "21",
         label: "Projects",
-        icon: <RiProjectorFill className="fill-[#efc75e]" />,
+        icon: <RiProjectorFill style={{ color: "#efc75e" }} />,
       },
       {
         key: "22",
         label: "Experts",
-        icon: <GrUserExpert className="fill-[#efc75e]" />,
+        icon: <GrUserExpert style={{ color: "#efc75e" }} />,
       },
       {
         key: "23",
@@ -351,7 +351,7 @@ export const items: MenuProps["items"] = [
   {
     key: "3",
     label: "People",
-    icon: <IoIosPeople />,
+    icon: <IoIosPeople style={{ color: "#efc75e" }} />,
     children: [
       {
         key: "31",
@@ -368,12 +368,12 @@ export const items: MenuProps["items"] = [
   {
     key: "4",
     label: "About Us",
-    icon: <TbArrowRoundaboutRight className="text-[#efc75e]" />,
+    icon: <TbArrowRoundaboutRight style={{ color: "#efc75e" }} />,
     children: [
       {
         key: "41",
         label: "Culture",
-        icon: <MdOutlineAgriculture className="text-[#efc75e]" />,
+        icon: <MdOutlineAgriculture style={{ color: "#efc75e" }} />,
       },
       { key: "42", label: "News", icon: <TbNews className="fill-[#efc75e]" /> },
 
@@ -387,7 +387,7 @@ export const items: MenuProps["items"] = [
   {
     key: "5",
     label: "Contact Us",
-    icon: <IoIosContacts className="text-[#efc75e]" />,
+    icon: <IoIosContacts style={{ color: "#efc75e" }} />,
   },
 ];
 export const projectData = [

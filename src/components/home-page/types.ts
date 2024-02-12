@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 export enum FIRMNAME {
-  NAME = "M.E.D.E.B.E.R",
+  NAME = "MEDEBER",
 }
 
 import type { MenuProps } from "antd";

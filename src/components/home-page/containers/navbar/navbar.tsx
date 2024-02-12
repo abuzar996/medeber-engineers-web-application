@@ -50,7 +50,7 @@ const NavBar = () => {
               color: "#efc75e",
               fontWeight: token.fontWeightStrong,
               fontSize: token.fontSizeHeading5,
-              textDecoration: "underline",
+
               cursor: "pointer",
             }}
           >
@@ -87,9 +87,7 @@ const NavBar = () => {
           setMenuActive={setMenuActive}
         />
       )}
-      <Flex flex="1" justify="center">
-        <NavBarSearch />
-      </Flex>
+
       {isDesktopOrLaptop && (
         <NavContent
           isOpen={isPeopleOpen}
@@ -116,7 +114,9 @@ const NavBar = () => {
           setMenuActive={setMenuActive}
         />
       )}
-
+      <Flex flex="1" justify="center">
+        <NavBarSearch />
+      </Flex>
       {(isMobile || isLowTab || isPotraitTab) && (
         <Flex justify="flex-end" align="center">
           <Icons>

@@ -8,6 +8,7 @@ import {
   Menu,
   ConfigProvider,
 } from "antd";
+import { IoMdArrowRoundForward } from "react-icons/io";
 import { useScreens } from "../../../../hooks/useScreen";
 import { FaChevronDown } from "react-icons/fa";
 import type { DrawerProps } from "antd";
@@ -143,15 +144,57 @@ const NavContent: React.FC<NavContentProps> = ({
                 menu={{
                   items: navData!.items,
                   onClick: handleMenuClick,
+
                   id: "element",
                   style: {
-                    width: "400px",
-                    maxHeight: "300px",
-                    overflowX: "hidden",
-                    overflowY: "scroll",
+                    width: "100%",
+
                     backgroundImage: `linear-gradient(to right,  #3b82f6 ,#1b1247)`,
                   },
                 }}
+                dropdownRender={(menu) => (
+                  <Flex
+                    style={{
+                      minWidth: "400px",
+                      borderRadius: token.borderRadiusLG,
+                      background: `linear-gradient(to right,  #3b82f6 ,#1b1247)`,
+                    }}
+                    vertical
+                  >
+                    <Flex
+                      style={{
+                        maxHeight: "200px",
+                        minWidth: "100%",
+                        overflowY: "scroll",
+                      }}
+                    >
+                      {menu}
+                    </Flex>
+                    <Flex
+                      flex="1"
+                      justify="center"
+                      gap="small"
+                      align="center"
+                      style={{
+                        padding: token.paddingXS,
+                        borderTop: "1px solid #efc75e",
+                        color: "#efc75e",
+                      }}
+                      className="hover:underline"
+                    >
+                      <Typography.Text
+                        style={{
+                          fontSize: token.fontSizeHeading5,
+                          color: "#efc75e",
+                          cursor: "pointer",
+                        }}
+                      >
+                        Visit Full Site
+                      </Typography.Text>
+                      <IoMdArrowRoundForward />
+                    </Flex>
+                  </Flex>
+                )}
                 destroyPopupOnHide
                 arrow
                 onOpenChange={handleOpenChange}

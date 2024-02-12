@@ -5,6 +5,7 @@ import {
   Typography,
   Divider,
   ConfigProvider,
+  CarouselProps,
 } from "antd";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import { IoMdArrowRoundForward } from "react-icons/io";
@@ -21,7 +22,7 @@ const FeaturedProjects = () => {
     if (activeIndex !== -1) {
       if (activeIndex < projectData.length - 1) {
         setActiveProject(projectData[activeIndex + 1]);
-        setActiveProjectIndex(activeIndex + 1);
+        setActiveProjectIndex((index) => index + 1);
       } else {
         setActiveProject(projectData[0]);
         setActiveProjectIndex(1);
@@ -35,12 +36,16 @@ const FeaturedProjects = () => {
     if (activeIndex !== -1) {
       if (activeIndex > 0) {
         setActiveProject(projectData[activeIndex - 1]);
-        setActiveProjectIndex(activeIndex + 1);
+        setActiveProjectIndex((index) => index - 1);
       } else {
         setActiveProject(projectData[projectData.length - 1]);
-        setActiveProjectIndex(projectData.length - 1);
+        setActiveProjectIndex(projectData.length);
       }
     }
+  };
+  const onCrousalChange: CarouselProps["afterChange"] = (index: number) => {
+    setActiveProjectIndex(index + 1);
+    setActiveProject(projectData[index]);
   };
   return (
     <div
@@ -50,14 +55,15 @@ const FeaturedProjects = () => {
         padding: token.paddingXS,
         width: "100%",
       }}
+      className="select-none xs:max-md:flex-col"
     >
       <div
         style={{
           display: "flex",
           flex: "1",
           flexDirection: "column",
-          width: "50%",
         }}
+        className="xs:max-md:w-full w-[50%]"
       >
         <Flex
           flex="1"
@@ -92,6 +98,7 @@ const FeaturedProjects = () => {
             autoplaySpeed={4000}
             dots={false}
             style={{ height: "300px" }}
+            afterChange={onCrousalChange}
           >
             {projectData.map((project) => (
               <div
@@ -99,8 +106,6 @@ const FeaturedProjects = () => {
                 style={{
                   padding: token.paddingSM,
                   background: "red",
-                  width: "50%",
-
                   float: "right",
                 }}
               >
@@ -200,6 +205,7 @@ const FeaturedProjects = () => {
         >
           <Flex flex="1" justify="center" style={{ height: "fit-content" }}>
             <Typography.Text
+              className="animate-debounce"
               style={{
                 textAlign: "center",
                 fontSize: token.fontSizeHeading4,
