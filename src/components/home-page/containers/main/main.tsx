@@ -61,7 +61,6 @@ const TextArea: React.FC<TextAreaProps> = ({ styles }) => {
           <Typography.Title
             style={{
               fontWeight: "lighter",
-              //fontSize: token.fontSizeHeading1,
               color: "#fff",
             }}
           >

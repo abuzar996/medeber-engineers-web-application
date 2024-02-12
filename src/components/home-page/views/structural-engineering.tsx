@@ -1,4 +1,4 @@
-import CustomService from "../commons/custom-service";
+import CustomService from "../commons/custom-service/custom-service";
 const StructuralEngineering = () => {
   return (
     <>
