@@ -4,6 +4,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        primary: "#1b1247",
+        secondary: "#efc75e",
+      },
       screens: { xs: "100px" },
       keyframes: {
         customBounce: {
@@ -24,6 +28,7 @@ export default {
       animation: { debounce: "customBounce 1s linear" },
     },
   },
+
   plugins: [
     plugin(function ({ addUtilities }) {
       addUtilities({

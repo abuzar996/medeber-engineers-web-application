@@ -5,7 +5,11 @@ import HomePage from "./components/home-page";
 import "./components/home-page/layout/scroll.css";
 
 function App() {
-  return <HomePage />;
+  return (
+    <div className="app">
+      <HomePage />
+    </div>
+  );
 }
 
 export default App;
