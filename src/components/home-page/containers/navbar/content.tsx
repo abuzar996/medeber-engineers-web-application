@@ -168,9 +168,9 @@ const NavContent: React.FC<NavContentProps> = ({
                   >
                     <Flex
                       style={{
-                        //maxHeight: "200px",
+                        maxHeight: "200px",
                         minWidth: "100%",
-                        //overflowY: "scroll",
+                        overflowY: "scroll",
                       }}
                     >
                       {menu}

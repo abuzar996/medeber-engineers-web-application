@@ -8,6 +8,9 @@ const HomePage = lazy(() => import("../components/home-page"));
 const Main = lazy(() => import("../components/home-page/views/home"));
 const Market = lazy(() => import("../components/home-page/views/market"));
 const Services = lazy(() => import("../components/home-page/views/service"));
+const StructuralEngineering = lazy(
+  () => import("../components/home-page/views/structural-engineering")
+);
 import App from "../App";
 const FullscreenSpinner = () => <Spin fullscreen />;
 
@@ -51,6 +54,16 @@ const routes: RouteObject[] = [
                 <Services />
               </Suspense>
             ),
+            children: [
+              {
+                path: "/services/structural-engineering",
+                element: (
+                  <Suspense fallback={<FullscreenSpinner />}>
+                    <StructuralEngineering />
+                  </Suspense>
+                ),
+              },
+            ],
           },
         ],
       },
