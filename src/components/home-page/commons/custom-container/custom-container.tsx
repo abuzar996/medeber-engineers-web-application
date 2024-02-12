@@ -63,7 +63,7 @@ const CustomContainers: React.FC<CustomContainerProps> = ({ data }) => {
               key={service.id}
               className="basis-[30%] xs:max-sm:basis-[100%] sm:max-md:basis-[45%]"
             >
-              <CustomCard data={service} />
+              <CustomCard data={service} type={true} />
             </Flex>
           ))}
         </Flex>

@@ -11,6 +11,9 @@ const Services = lazy(() => import("../components/home-page/views/service"));
 const StructuralEngineering = lazy(
   () => import("../components/home-page/views/structural-engineering")
 );
+//const CustomServices = lazy(
+// () => import("../components/home-page/commons/custom-service/custom-service")
+//);
 import App from "../App";
 const FullscreenSpinner = () => <Spin fullscreen />;
 

@@ -2,8 +2,9 @@ import { ConfigProvider, Divider, Flex, Typography, theme } from "antd";
 import { CustomContainerServices } from "../../types";
 interface CustomCardProps {
   data: CustomContainerServices;
+  type: boolean;
 }
-const CustomCard: React.FC<CustomCardProps> = ({ data }) => {
+const CustomCard: React.FC<CustomCardProps> = ({ data, type }) => {
   const { token } = theme.useToken();
   return (
     <div className="h-[100%] w-full ">
@@ -42,30 +43,34 @@ const CustomCard: React.FC<CustomCardProps> = ({ data }) => {
                 {data.label}
               </Typography.Title>
             </Flex>
-            <ConfigProvider
-              theme={{
-                components: {
-                  Divider: {
-                    marginLG: 0,
-                    colorSplit: "#efc75e",
+            {type && (
+              <ConfigProvider
+                theme={{
+                  components: {
+                    Divider: {
+                      marginLG: 0,
+                      colorSplit: "#efc75e",
+                    },
                   },
-                },
-              }}
-            >
-              <Divider />
-            </ConfigProvider>
+                }}
+              >
+                <Divider />
+              </ConfigProvider>
+            )}
           </Flex>
-          <Flex flex="1" align="center">
-            <Typography.Text
-              style={{
-                fontStyle: "italic",
-                color: "#efc75e",
-                fontSize: token.fontSizeHeading5,
-              }}
-            >
-              {data.headDescription}
-            </Typography.Text>
-          </Flex>
+          {type && (
+            <Flex flex="1" align="center">
+              <Typography.Text
+                style={{
+                  fontStyle: "italic",
+                  color: "#efc75e",
+                  fontSize: token.fontSizeHeading5,
+                }}
+              >
+                {data.headDescription}
+              </Typography.Text>
+            </Flex>
+          )}
         </Flex>
       </Flex>
     </div>
