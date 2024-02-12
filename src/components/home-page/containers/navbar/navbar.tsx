@@ -1,30 +1,32 @@
 import { Flex, theme, Typography } from "antd";
-import NavContent from "./content";
 import MedeberLogo from "../../../../assets/Images/medeber.png";
-import { FIRMNAME } from "../../types";
-import { services, portfolio, people, contact, about } from "../../utills/data";
-import NavBarSearch from "./search";
-//import Header from "../../../../assets/Images/header2.png";
-
-//const color1 = "#1b1247";
-import { RxHamburgerMenu } from "react-icons/rx";
-import { useState } from "react";
 import Icons from "./icons";
+import { useState } from "react";
 import { useScreens } from "../../../../hooks/useScreen";
-//const color2 = "#efc75e";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { FIRMNAME } from "../../types";
+import { useNavigate } from "react-router-dom";
+import { services, portfolio, people, contact, about } from "../../utills/data";
+import NavContent from "./content";
+import NavBarSearch from "./search";
 
 const NavBar = () => {
   const { token } = theme.useToken();
+  const navigate = useNavigate();
   const [menuActive, setMenuActive] = useState(false);
   const [isServiceOpen, setIsServiceOpen] = useState(false);
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
   const [isPeopleOpen, setIsPeopleOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isMobile, isLowTab, isPotraitTab, isDesktopOrLaptop] = useScreens();
 
   const handleMenuClicked = () => {
     setMenuActive((menuActive) => !menuActive);
   };
-  const [isMobile, isLowTab, isPotraitTab, isDesktopOrLaptop] = useScreens();
+
+  const handleHomeClicked = () => {
+    navigate("/");
+  };
   return (
     <Flex
       flex="1"
@@ -37,7 +39,7 @@ const NavBar = () => {
         boxShadow: "rgba(149, 157, 165, 0.6) 0px 0px 18px",
       }}
     >
-      <Flex align="center" gap="small">
+      <Flex align="center" gap="small" onClick={handleHomeClicked}>
         <img
           src={MedeberLogo}
           alt="logo"

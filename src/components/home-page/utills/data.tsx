@@ -1,12 +1,25 @@
 import Icons from "../containers/navbar/icons";
-
+import Education from "../../../assets/Images/markets/education.png";
+import Commercial from "../../../assets/Images/markets/commercial.png";
+import Entertainment from "../../../assets/Images/markets/entertainment.png";
+import Government from "../../../assets/Images/markets/government.png";
+import Healthcare from "../../../assets/Images/markets/healthcare.png";
+import Services from "../../../assets/Images/services/services.png";
+import Electrical from "../../../assets/Images/services/electrical.png";
+import Service2 from "../../../assets/Images/services/service2.png";
+import mechanical from "../../../assets/Images/services/mechanical.png";
+import Manufacturing from "../../../assets/Images/services/manufacturing.png";
+import Energy from "../../../assets/Images/services/energy.png";
+import Software from "../../../assets/Images/services/softwar.png";
+import Structural from "../../../assets/Images/services/structural.png";
+import Technology from "../../../assets/Images/services/technology.png";
+import Transport from "../../../assets/Images/markets/transport.png";
 import Project1 from "../../../assets/Images/project1.png";
 import Project2 from "../../../assets/Images/project2.png";
 import Project3 from "../../../assets/Images/project3.png";
 import Market from "../../../assets/Images/main5.png";
 import { Flex, Card, Typography } from "antd";
 import { DefaultOptionType } from "antd/es/select";
-import { HomepageData } from "../types";
 import { IoIosPeople } from "react-icons/io";
 import { TbFileDescription } from "react-icons/tb";
 import { FaServicestack } from "react-icons/fa6";
@@ -30,7 +43,7 @@ import { GiRollingEnergy } from "react-icons/gi";
 import { SiCoinmarketcap } from "react-icons/si";
 
 import { MdOutlineAgriculture } from "react-icons/md";
-
+import { CustomContainer } from "../types";
 export const services: DefaultOptionType = {
   id: 1,
   label: "Services",
@@ -39,6 +52,7 @@ export const services: DefaultOptionType = {
       <FaServicestack />
     </Icons>
   ),
+  route: "/services",
   items: [
     {
       label: (
@@ -142,6 +156,7 @@ export const portfolio: DefaultOptionType = {
       <TbFileDescription />
     </Icons>
   ),
+  route: "/services",
   items: [
     {
       label: (
@@ -184,7 +199,7 @@ export const portfolio: DefaultOptionType = {
     },
   ],
 };
-export const people: HomepageData = {
+export const people: DefaultOptionType = {
   id: 3,
   label: "People",
   icon: (
@@ -192,6 +207,7 @@ export const people: HomepageData = {
       <IoIosPeople />
     </Icons>
   ),
+  route: "/services",
   items: [
     {
       label: (
@@ -229,6 +245,7 @@ export const about: DefaultOptionType = {
       <TbArrowRoundaboutRight />
     </Icons>
   ),
+  route: "/services",
 
   items: [
     {
@@ -275,6 +292,7 @@ export const about: DefaultOptionType = {
 export const contact: DefaultOptionType = {
   id: 5,
   label: "Contact Us",
+  route: "/services",
   icon: (
     <Icons>
       <IoIosContacts />
@@ -411,7 +429,7 @@ export const projectData = [
   },
 ];
 
-export const marketData = {
+export const marketData: CustomContainer = {
   image: Market,
   mainLabel: "Market",
   description: "We’ve got experience in a wide variety of industries.",
@@ -425,43 +443,110 @@ export const marketData = {
 
   services: [
     {
-      id: "1",
+      id: "11",
       label: "Transportation",
-      serviceImage: Market,
+      serviceImage: Transport,
       headDescription: "Travel safety is more important than ever.",
     },
     {
-      id: "2",
+      id: "12",
       label: "Education",
-      serviceImage: Market,
+      serviceImage: Education,
       headDescription:
         "Energy efficiency, robust technology availability and appropriate security measures are priorities for education providers.",
     },
     {
-      id: "3",
+      id: "13",
       label: "Entertainment",
-      serviceImage: Market,
+      serviceImage: Entertainment,
       headDescription:
         "Facilities that help celebrate art and cultures are more valuable than ever.",
     },
     {
-      id: "4",
+      id: "14",
       label: "Government",
-      serviceImage: Market,
+      serviceImage: Government,
       headDescription:
         "MEDEBER understands the unique services that governmental agencies require from continuing services contracts to major complex buildings.",
     },
     {
-      id: "5",
+      id: "15",
       label: "Healthcare",
-      serviceImage: Market,
+      serviceImage: Healthcare,
       headDescription:
         "MEDEBER is a nationally recognized engineering firm that has specialized in providing healthcare solutions since 1955.",
     },
     {
-      id: "6",
+      id: "16",
       label: "Commercial",
-      serviceImage: Market,
+      serviceImage: Commercial,
+      headDescription: "Engineering places to live, work, and enjoy!",
+    },
+  ],
+};
+
+export const servicesData: CustomContainer = {
+  image: Services,
+  mainLabel: "Services",
+  description:
+    "Explore our services to see how MEDEBER can make your next project successful.",
+  headData: {
+    label: "FEATURED SERVICE",
+    subHeading: "Mechanical, Electrical, Plumbing",
+    headImage: Service2,
+    headDescription:
+      "A quality building environment combines the right solutions of thermal comfort, air quality, lighting, water and gases delivered where and when needed and safely transported away.",
+  },
+
+  services: [
+    {
+      id: "1",
+      label: "Electrical Engineering",
+      serviceImage: Electrical,
+      headDescription:
+        "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
+    },
+    {
+      id: "2",
+      label: "Mechanical Engineering",
+      serviceImage: mechanical,
+      headDescription:
+        "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
+    },
+    {
+      id: "3",
+      label: "Structural Engineering",
+      serviceImage: Structural,
+      headDescription:
+        "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
+    },
+    {
+      id: "4",
+      label: "Software Development",
+      serviceImage: Software,
+      headDescription:
+        "Increasingly complex building systems and aggressive construction schedules make new building commissioning one of the best investments an owner can make.",
+    },
+    {
+      id: "5",
+      label: "Energy Services",
+      serviceImage: Energy,
+      headDescription:
+        "From the moment a building is completed, it begins to change. Internal and external changes result in energy and water efficiency degrading over time.",
+    },
+
+    {
+      id: "6",
+      label: "Technology",
+      serviceImage: Technology,
+      headDescription:
+        "It’s simple—leveraging technological advancements maximizes the return of your building investment.",
+    },
+
+    {
+      id: "7",
+      label: "Manufacturing",
+      serviceImage: Manufacturing,
       headDescription: "Engineering places to live, work, and enjoy!",
     },
   ],

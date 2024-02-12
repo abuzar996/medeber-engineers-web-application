@@ -1,9 +1,12 @@
 import { ConfigProvider, Divider, Flex, Typography, theme } from "antd";
-import Image1 from "../../../../assets/Images/corporate9.png";
-const CustomCard = () => {
+import { CustomContainerServices } from "../../types";
+interface CustomCardProps {
+  data: CustomContainerServices;
+}
+const CustomCard: React.FC<CustomCardProps> = ({ data }) => {
   const { token } = theme.useToken();
   return (
-    <div className="h-[100%] ">
+    <div className="h-[100%] w-full ">
       <Flex
         gap="small"
         vertical
@@ -16,7 +19,7 @@ const CustomCard = () => {
         className=" text-secondary hover:transition-shadow hover:transition-padding  bg-gradient-to-r from-blue-500 to-[#1b1247] hover:shadow-[-5px_-2px_10px_5px_#c8bef7] p-[10px] "
       >
         <img
-          src={Image1}
+          src={data.serviceImage}
           style={{
             height: "200px",
             border: "1px solid #efc75e",
@@ -36,7 +39,7 @@ const CustomCard = () => {
                   fontSize: token.fontSizeHeading3,
                 }}
               >
-                Hello world
+                {data.label}
               </Typography.Title>
             </Flex>
             <ConfigProvider
@@ -60,8 +63,7 @@ const CustomCard = () => {
                 fontSize: token.fontSizeHeading5,
               }}
             >
-              Our goal is to maximize efficiency while ensuring redundency in
-              the high complex facilities
+              {data.headDescription}
             </Typography.Text>
           </Flex>
         </Flex>

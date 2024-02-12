@@ -1,6 +1,9 @@
 import { Flex, Typography, theme } from "antd";
-import Image from "../../../../assets/Images/main4.png";
-const CustomHead = () => {
+import { CustomInnerContainer } from "../../types";
+interface CustomHeadProps {
+  data: CustomInnerContainer;
+}
+const CustomHead: React.FC<CustomHeadProps> = ({ data }) => {
   const { token } = theme.useToken();
   return (
     <div
@@ -14,7 +17,7 @@ const CustomHead = () => {
       >
         <Flex flex="1" className="h-full">
           <img
-            src={Image}
+            src={data.headImage}
             style={{
               width: "100%",
               height: "100%",
@@ -40,7 +43,7 @@ const CustomHead = () => {
             <Typography.Text
               style={{ fontSize: token.fontSizeHeading4, color: "#efc75e" }}
             >
-              Featured Expertise
+              {data.label}
             </Typography.Text>
           </Flex>
           <Flex
@@ -59,7 +62,7 @@ const CustomHead = () => {
                 color: "#efc75e",
               }}
             >
-              Electrical, Mechanical and Structural designs all are available
+              {data.subHeading}
             </Typography.Text>
           </Flex>
           <Flex
@@ -82,9 +85,7 @@ const CustomHead = () => {
                 color: "#efc75e",
               }}
             >
-              Terminals operate 24/7, requiring building systems that provide
-              for travel confort and security, while also striving for
-              sustainability.
+              {data.headDescription}
             </Typography.Text>
           </Flex>
         </Flex>

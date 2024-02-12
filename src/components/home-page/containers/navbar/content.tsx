@@ -1,4 +1,3 @@
-import { HomepageData } from "../../types";
 import {
   theme,
   Flex,
@@ -8,6 +7,7 @@ import {
   Menu,
   ConfigProvider,
 } from "antd";
+import { useNavigate } from "react-router-dom";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { useScreens } from "../../../../hooks/useScreen";
 import { FaChevronDown } from "react-icons/fa";
@@ -18,14 +18,13 @@ import { useState } from "react";
 import { useMemo } from "react";
 const color1 = "#1b1247";
 import { DefaultOptionType } from "antd/es/select";
-//const color2 = "#efc75e";
 import { items } from "../../utills/data";
 const rootSubmenuKeys = ["1"];
 import "../../layout/scroll.css";
 interface NavContentProps {
   isOpen?: boolean;
   setIsOpen?: (val: boolean) => void;
-  navData?: HomepageData | DefaultOptionType;
+  navData?: DefaultOptionType;
   menuActive: boolean;
   setMenuActive: (val: boolean) => void;
 }
@@ -37,6 +36,7 @@ const NavContent: React.FC<NavContentProps> = ({
   setMenuActive,
 }) => {
   const { token } = theme.useToken();
+  const navigate = useNavigate();
   const [openKeys, setOpenKeys] = useState([""]);
 
   const onOpenChange: MenuProps["onOpenChange"] = (keys) => {
@@ -59,7 +59,12 @@ const NavContent: React.FC<NavContentProps> = ({
       // setOpen(false);
     }
   };
-
+  const handleVisitClicked = () => {
+    //setOpen(false);
+    setOpenKeys([""]);
+    setIsOpen && setIsOpen(false);
+    navigate(navData!.route);
+  };
   const handleOpenChange: DropdownProps["onOpenChange"] = (nextOpen, info) => {
     if (info.source === "trigger" || nextOpen) {
       setIsOpen && setIsOpen(nextOpen);
@@ -67,7 +72,7 @@ const NavContent: React.FC<NavContentProps> = ({
   };
 
   return (
-    <Flex flex={1} justify="space-around">
+    <Flex flex={1} justify="space-around" className="select-none">
       {(isMobile || isLowTab || isPotraitTab) && menuActive && (
         <Drawer
           styles={{
@@ -163,9 +168,9 @@ const NavContent: React.FC<NavContentProps> = ({
                   >
                     <Flex
                       style={{
-                        maxHeight: "200px",
+                        //maxHeight: "200px",
                         minWidth: "100%",
-                        overflowY: "scroll",
+                        //overflowY: "scroll",
                       }}
                     >
                       {menu}
@@ -180,7 +185,8 @@ const NavContent: React.FC<NavContentProps> = ({
                         borderTop: "1px solid #efc75e",
                         color: "#efc75e",
                       }}
-                      className="hover:underline"
+                      className="hover:underline select-none"
+                      onClick={handleVisitClicked}
                     >
                       <Typography.Text
                         style={{

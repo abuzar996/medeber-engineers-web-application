@@ -1,13 +1,14 @@
 import "./App.css";
-import HomePage from "./components/home-page";
-//import Main from "./assets/Images/main7.png";
+//import HomePage from "./components/home-page";
+import { Outlet } from "react-router-dom";
 
 import "./components/home-page/layout/scroll.css";
 
 function App() {
   return (
     <div className="app">
-      <HomePage />
+      <Outlet />
+      {/* <HomePage /> */}
     </div>
   );
 }
