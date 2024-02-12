@@ -3,10 +3,14 @@ import Image from "../../../../assets/Images/main4.png";
 const CustomHead = () => {
   const { token } = theme.useToken();
   return (
-    <div className="w-full h-full select-none bg-gradient-to-r from-blue-500 to-[#1b1247]">
+    <div
+      style={{ borderRadius: token.borderRadiusLG }}
+      className="w-full h-full select-none bg-gradient-to-r from-blue-500 to-[#1b1247]"
+    >
       <Flex
         flex="1"
-        className=" h-full xs:max-md:flex-col hover:shadow-[-5px_-2px_10px_5px_#c8bef7] p-[10px] hover:p-[15px]"
+        style={{ borderRadius: token.borderRadiusLG }}
+        className=" h-full xs:max-md:flex-col hover:shadow-[-5px_-2px_10px_5px_#c8bef7] p-[10px]"
       >
         <Flex flex="1" className="h-full">
           <img
@@ -16,12 +20,22 @@ const CustomHead = () => {
               height: "100%",
               border: "1px solid #efc75e",
               borderRight: "none",
+              borderRadius: token.borderRadiusLG,
+              borderTopRightRadius: 0,
+              borderBottomRightRadius: 0,
             }}
           />
         </Flex>
         <Flex flex="1" className="h-full  " vertical>
           <Flex
-            style={{ padding: token.paddingSM, border: "1px solid #efc75e" }}
+            style={{
+              padding: token.paddingSM,
+              border: "1px solid #efc75e",
+              borderRadius: token.borderRadiusLG,
+              borderBottomLeftRadius: 0,
+              borderTopLeftRadius: 0,
+              borderBottomRightRadius: 0,
+            }}
           >
             <Typography.Text
               style={{ fontSize: token.fontSizeHeading4, color: "#efc75e" }}
@@ -50,10 +64,12 @@ const CustomHead = () => {
           </Flex>
           <Flex
             flex="1"
+            className="h-full"
             style={{
               padding: token.paddingSM,
               border: "1px solid #efc75e",
               borderTop: "none",
+              borderBottomRightRadius: token.borderRadiusLG,
             }}
           >
             <Typography.Text

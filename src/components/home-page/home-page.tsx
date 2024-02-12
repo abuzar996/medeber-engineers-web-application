@@ -1,22 +1,23 @@
-// import HomePageLayout from "./layout/home-page-layout";
-// import { Flex } from "antd";
-// import Footer from "./containers/footer";
-// import FeaturedProjects from "./containers/featured";
-// import Main from "./containers/main";
-// import NewsLetter from "./containers/news-letter";
-import CustomHead from "./commons/custom-head";
+import HomePageLayout from "./layout/home-page-layout";
+import { Flex } from "antd";
+import Footer from "./containers/footer";
+//import FeaturedProjects from "./containers/featured";
+//import Main from "./containers/main";
+import NewsLetter from "./containers/news-letter";
+import CustomContainer from "./commons/custom-container";
+
 const HomePage = () => {
   return (
     <div className="h-full w-full">
-      <CustomHead />
-      {/* <HomePageLayout>
+      <HomePageLayout>
         <Flex vertical className="w-full ">
-          <Main />
-          <FeaturedProjects />
+          {/* <Main />
+          <FeaturedProjects /> */}
+          <CustomContainer />
           <NewsLetter />
           <Footer />
         </Flex>
-      </HomePageLayout> */}
+      </HomePageLayout>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Icons from "../containers/navbar/icons";
 import Project1 from "../../../assets/Images/project1.png";
 import Project2 from "../../../assets/Images/project2.png";
 import Project3 from "../../../assets/Images/project3.png";
-
+import Market from "../../../assets/Images/main5.png";
 import { Flex, Card, Typography } from "antd";
 import { DefaultOptionType } from "antd/es/select";
 import { HomepageData } from "../types";
@@ -410,3 +410,59 @@ export const projectData = [
     desc: "Development of desktop application for bussiness growth and representation",
   },
 ];
+
+export const marketData = {
+  image: Market,
+  mainLabel: "Market",
+  description: "We’ve got experience in a wide variety of industries.",
+  headData: {
+    label: "FEATURED MARKET",
+    subHeading: "Aviation",
+    headImage: Market,
+    headDescription:
+      "Terminals operate 24/7, requiring building systems that provide for traveler comfort and security, while also striving for sustainability.",
+  },
+
+  services: [
+    {
+      id: "1",
+      label: "Transportation",
+      serviceImage: Market,
+      headDescription: "Travel safety is more important than ever.",
+    },
+    {
+      id: "2",
+      label: "Education",
+      serviceImage: Market,
+      headDescription:
+        "Energy efficiency, robust technology availability and appropriate security measures are priorities for education providers.",
+    },
+    {
+      id: "3",
+      label: "Entertainment",
+      serviceImage: Market,
+      headDescription:
+        "Facilities that help celebrate art and cultures are more valuable than ever.",
+    },
+    {
+      id: "4",
+      label: "Government",
+      serviceImage: Market,
+      headDescription:
+        "MEDEBER understands the unique services that governmental agencies require from continuing services contracts to major complex buildings.",
+    },
+    {
+      id: "5",
+      label: "Healthcare",
+      serviceImage: Market,
+      headDescription:
+        "MEDEBER is a nationally recognized engineering firm that has specialized in providing healthcare solutions since 1955.",
+    },
+    {
+      id: "6",
+      label: "Commercial",
+      serviceImage: Market,
+      headDescription: "Engineering places to live, work, and enjoy!",
+    },
+  ],
+};

@@ -13,7 +13,7 @@ const CustomCard = () => {
           border: "1px solid #efc75e",
           minHeight: "100%",
         }}
-        className=" text-secondary hover:transition-shadow hover:transition-padding  bg-gradient-to-r from-blue-500 to-[#1b1247] hover:shadow-[-5px_-2px_10px_5px_#c8bef7] p-[10px] hover:p-[15px]"
+        className=" text-secondary hover:transition-shadow hover:transition-padding  bg-gradient-to-r from-blue-500 to-[#1b1247] hover:shadow-[-5px_-2px_10px_5px_#c8bef7] p-[10px] "
       >
         <img
           src={Image1}
@@ -27,7 +27,7 @@ const CustomCard = () => {
           <Flex vertical className="w-[100%]">
             <Flex
               flex="1"
-              justify="center"
+              justify="flex-start"
               style={{ padding: token.paddingXS }}
             >
               <Typography.Title

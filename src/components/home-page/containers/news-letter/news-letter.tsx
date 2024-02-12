@@ -38,6 +38,7 @@ const NewsLetter = () => {
           >
             <Flex>
               <Typography.Text
+                className="xs:max-sm:hidden"
                 style={{
                   fontWeight: token.fontWeightStrong,
                   fontSize: token.fontSizeHeading3,
@@ -45,6 +46,16 @@ const NewsLetter = () => {
                 }}
               >
                 Stay in the loop. Sign up for our newsletter.
+              </Typography.Text>
+              <Typography.Text
+                className="sm:hidden"
+                style={{
+                  fontWeight: token.fontWeightStrong,
+                  fontSize: token.fontSizeHeading3,
+                  color: "#efc75e",
+                }}
+              >
+                Stay in the loop.
               </Typography.Text>
             </Flex>
             <Flex>
