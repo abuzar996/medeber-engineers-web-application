@@ -1,5 +1,7 @@
 import CustomProjectCard from "../custom-project-card";
 import { Flex, theme } from "antd";
+import type { PaginationProps } from "antd";
+import { Pagination } from "antd";
 import "../../layout/scroll.css";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { useRef, useState } from "react";
@@ -7,6 +9,7 @@ const CustomSlider = () => {
   const flexRef = useRef<HTMLInputElement>(null);
   const { token } = theme.useToken();
   const [left, setLeft] = useState(0);
+  const [current, setCurrent] = useState(3);
 
   const handleNextClick = () => {
     setLeft((left) => left + 30);
@@ -14,7 +17,10 @@ const CustomSlider = () => {
       flexRef.current.scrollTo({ left });
     }
   };
-
+  const onChange: PaginationProps["onChange"] = (page) => {
+    console.log(page);
+    setCurrent(page);
+  };
   const handlePreviousClicked = () => {
     setLeft((left) => left - 30);
     if (flexRef.current) {
@@ -26,6 +32,7 @@ const CustomSlider = () => {
       align="center"
       style={{
         border: "2px solid #efc753",
+
         borderRadius: token.borderRadiusLG,
         background: "transparent",
       }}
@@ -38,7 +45,7 @@ const CustomSlider = () => {
           borderBottomLeftRadius: token.borderRadiusLG,
           backgroundImage: `linear-gradient(to right,  #3b82f6 ,#1b1247)`,
         }}
-        className="h-full select-none"
+        className="h-full select-none xs:max-sm:hidden"
         align="center"
         flex="1"
       >
@@ -51,20 +58,15 @@ const CustomSlider = () => {
       <Flex>
         <Flex
           ref={flexRef}
-          className="select-none"
+          className="select-none w-[calc(100vw_-_200px)] overflow-x-auto scroll-smooth xs:max-sm:w-screen box-content xs:max-sm:hidden"
           id="element"
-          style={{
-            width: "calc(100vw - 200px)",
-
-            overflowX: "scroll",
-            scrollBehavior: "smooth",
-          }}
           align="center"
           gap="large"
         >
-          <Flex style={{ minWidth: "450px" }}>
+          <Flex className="sm:min-w-[450px] ">
             <CustomProjectCard type={false} />
           </Flex>
+
           <Flex style={{ minWidth: "450px" }}>
             <CustomProjectCard type={false} />
           </Flex>
@@ -85,9 +87,10 @@ const CustomSlider = () => {
           border: "1px solid #efc753",
           borderTopRightRadius: token.borderRadiusLG,
           borderBottomRightRadius: token.borderRadiusLG,
+
           backgroundImage: `linear-gradient(to right,  #3b82f6 ,#1b1247)`,
         }}
-        className="h-full"
+        className="h-full xs:max-sm:hidden"
         align="center"
         flex="1"
       >
@@ -96,6 +99,20 @@ const CustomSlider = () => {
           className="text-[#efc75e]"
           onClick={handleNextClick}
         />
+      </Flex>
+      <Flex className="sm:hidden" vertical>
+        <CustomProjectCard type={false} />
+        <Flex className="w-[100%]" style={{ padding: token.paddingXS }}>
+          <Pagination
+            size="small"
+            current={current}
+            onChange={onChange}
+            total={10}
+            responsive={true}
+            defaultPageSize={1}
+            pageSize={1}
+          />
+        </Flex>
       </Flex>
     </Flex>
   );

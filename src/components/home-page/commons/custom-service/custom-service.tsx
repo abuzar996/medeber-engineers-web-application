@@ -8,8 +8,6 @@ const CustomService = () => {
       <CustomServiceHead />
       <CustomServiceIntro />
       <CustomProjects />
-
-      {/* <CustomServiceIntro /> */}
     </Flex>
   );
 };

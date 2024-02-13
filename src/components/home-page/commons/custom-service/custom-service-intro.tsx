@@ -6,10 +6,9 @@ const CustomServiceIntro = () => {
     <Flex
       flex="1"
       style={{
-        padding: token.paddingSM,
         width: "90%",
       }}
-      className="select-none xs:max-sm:flex-col "
+      className="select-none xs:max-sm:flex-col pb-[150px]"
     >
       <Flex flex="1" className="xs:max-sm:justify-center">
         <div className="w-[90%]">

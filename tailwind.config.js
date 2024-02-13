@@ -9,6 +9,9 @@ export default {
         secondary: "#efc75e",
       },
       screens: { xs: "100px", xxs: "321px" },
+      margin: {
+        calc: "calc(100vw - 200px)",
+      },
       keyframes: {
         customBounce: {
           "0%": {

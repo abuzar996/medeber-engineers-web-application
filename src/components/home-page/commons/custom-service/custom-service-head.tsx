@@ -4,7 +4,7 @@ import Structure from "../../../../assets/Images/services/structural.png";
 const CustomServiceHead = () => {
   const { token } = theme.useToken();
   return (
-    <Flex className="select-none xs:max-sm:flex-col-reverse h-full w-[90%] xs:max-sm:w-[100%] xs:max-sm:p-0 p-[10px]">
+    <Flex className="select-none xs:max-sm:flex-col-reverse h-full w-[90%] xs:max-sm:w-[100%] xs:max-sm:p-0 p-[10px] pt-[100px] ">
       <Flex vertical flex={1}>
         <Flex flex="1" vertical>
           <Flex
