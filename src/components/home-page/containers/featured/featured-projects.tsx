@@ -53,11 +53,11 @@ const FeaturedProjects = () => {
         display: "flex",
         flex: "1",
         padding: token.paddingXS,
-        paddingTop: "40px",
-        paddingBottom: "40px",
+        paddingTop: "100px",
+        paddingBottom: "100px",
         width: "100%",
         background:
-          "linear-gradient(to bottom,white 0%,white 90%,gray 95%,gray 100%)",
+          "linear-gradient(to bottom,gray 0%,gray 20%,white 50%,white 80%,grey 90%,gray 100%)",
       }}
       className="select-none xs:max-md:flex-col"
     >
@@ -91,6 +91,7 @@ const FeaturedProjects = () => {
             style={{
               padding: token.paddingSM,
               boxShadow: "rgba(149, 157, 165, 0.6) 0px 0px 18px",
+              background: "#fff",
             }}
           >
             <IoMdArrowRoundForward size={30} onClick={onForwardClicked} />

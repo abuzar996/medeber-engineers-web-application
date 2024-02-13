@@ -59,7 +59,7 @@ const CustomProjects = () => {
           </Flex>
         </Flex>
       </Flex>
-      <CustomSlider />
+      <CustomSlider type={false} />
     </Flex>
   );
 };

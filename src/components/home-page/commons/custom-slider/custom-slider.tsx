@@ -5,7 +5,10 @@ import { Pagination } from "antd";
 import "../../layout/scroll.css";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { useRef, useState } from "react";
-const CustomSlider = () => {
+interface CustomSliderProps {
+  type: boolean;
+}
+const CustomSlider: React.FC<CustomSliderProps> = ({ type }) => {
   const flexRef = useRef<HTMLInputElement>(null);
   const { token } = theme.useToken();
   const [left, setLeft] = useState(0);
@@ -58,26 +61,26 @@ const CustomSlider = () => {
       <Flex>
         <Flex
           ref={flexRef}
-          className="select-none w-[calc(100vw_-_200px)] overflow-x-auto scroll-smooth xs:max-sm:w-screen box-content xs:max-sm:hidden"
+          className="select-none max-w-[calc(100vw_-_200px)] overflow-x-auto scroll-smooth xs:max-sm:w-screen box-content xs:max-sm:hidden"
           id="element"
           align="center"
           gap="large"
         >
           <Flex className="sm:min-w-[450px] ">
-            <CustomProjectCard type={false} />
+            <CustomProjectCard type={type} />
           </Flex>
 
           <Flex style={{ minWidth: "450px" }}>
-            <CustomProjectCard type={false} />
+            <CustomProjectCard type={type} />
           </Flex>
           <Flex style={{ minWidth: "450px" }}>
-            <CustomProjectCard type={false} />
+            <CustomProjectCard type={type} />
           </Flex>
           <Flex style={{ minWidth: "450px" }}>
-            <CustomProjectCard type={false} />
+            <CustomProjectCard type={type} />
           </Flex>
           <Flex style={{ minWidth: "450px" }}>
-            <CustomProjectCard type={false} />
+            <CustomProjectCard type={type} />
           </Flex>
         </Flex>
       </Flex>
@@ -101,7 +104,7 @@ const CustomSlider = () => {
         />
       </Flex>
       <Flex className="sm:hidden" vertical>
-        <CustomProjectCard type={false} />
+        <CustomProjectCard type={type} />
         <Flex className="w-[100%]" style={{ padding: token.paddingXS }}>
           <Pagination
             size="small"
