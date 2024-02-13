@@ -8,7 +8,7 @@ export default {
         primary: "#1b1247",
         secondary: "#efc75e",
       },
-      screens: { xs: "100px" },
+      screens: { xs: "100px", xxs: "321px" },
       keyframes: {
         customBounce: {
           "0%": {

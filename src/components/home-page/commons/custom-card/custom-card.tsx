@@ -43,7 +43,7 @@ const CustomCard: React.FC<CustomCardProps> = ({ data, type }) => {
                 {data.label}
               </Typography.Title>
             </Flex>
-            {type && (
+            {!type && (
               <ConfigProvider
                 theme={{
                   components: {
@@ -58,7 +58,7 @@ const CustomCard: React.FC<CustomCardProps> = ({ data, type }) => {
               </ConfigProvider>
             )}
           </Flex>
-          {type && (
+          {!type && (
             <Flex flex="1" align="center">
               <Typography.Text
                 style={{

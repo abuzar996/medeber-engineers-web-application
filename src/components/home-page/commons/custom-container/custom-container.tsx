@@ -1,10 +1,12 @@
 import { Flex, Typography, theme } from "antd";
 import { CustomContainer } from "../../types";
+import List from "../custom-card-list";
 import CustomHead from "../custom-head";
-import CustomCard from "../custom-card";
+
 interface CustomContainerProps {
   data: CustomContainer;
 }
+
 const CustomContainers: React.FC<CustomContainerProps> = ({ data }) => {
   const { token } = theme.useToken();
   return (
@@ -45,28 +47,12 @@ const CustomContainers: React.FC<CustomContainerProps> = ({ data }) => {
             {data.description}
           </Typography.Text>
         </Flex>
-
         <Flex flex="1" className="w-[90%]" justify="center">
           <Flex flex={1} className="md:max-h-[550px] w-[100%]" justify="center">
             <CustomHead data={data.headData} />
           </Flex>
         </Flex>
-        <Flex
-          flex="1"
-          className="w-[90%] flex-wrap"
-          gap="large"
-          justify="space-between"
-          style={{ paddingTop: "50px", paddingBottom: "50px" }}
-        >
-          {data.services.map((service) => (
-            <Flex
-              key={service.id}
-              className="basis-[30%] xs:max-sm:basis-[100%] sm:max-md:basis-[45%]"
-            >
-              <CustomCard data={service} type={true} />
-            </Flex>
-          ))}
-        </Flex>
+        <List data={data.services} type={false} />
       </Flex>
     </div>
   );

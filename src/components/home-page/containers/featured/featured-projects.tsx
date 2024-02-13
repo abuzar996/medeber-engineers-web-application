@@ -53,7 +53,11 @@ const FeaturedProjects = () => {
         display: "flex",
         flex: "1",
         padding: token.paddingXS,
+        paddingTop: "40px",
+        paddingBottom: "40px",
         width: "100%",
+        background:
+          "linear-gradient(to bottom,white 0%,white 90%,gray 95%,gray 100%)",
       }}
       className="select-none xs:max-md:flex-col"
     >

@@ -7,13 +7,13 @@ import { RouteObject } from "react-router-dom";
 const HomePage = lazy(() => import("../components/home-page"));
 const Main = lazy(() => import("../components/home-page/views/home"));
 const Market = lazy(() => import("../components/home-page/views/market"));
-const Services = lazy(() => import("../components/home-page/views/service"));
+//const Services = lazy(() => import("../components/home-page/views/service"));
 const StructuralEngineering = lazy(
   () => import("../components/home-page/views/structural-engineering")
 );
-//const CustomServices = lazy(
-// () => import("../components/home-page/commons/custom-service/custom-service")
-//);
+const CustomServices = lazy(
+  () => import("../components/home-page/commons/custom-service/custom-service")
+);
 import App from "../App";
 const FullscreenSpinner = () => <Spin fullscreen />;
 
@@ -54,7 +54,7 @@ const routes: RouteObject[] = [
             path: "/services",
             element: (
               <Suspense fallback={<FullscreenSpinner />}>
-                <Services />
+                <CustomServices />
               </Suspense>
             ),
             children: [

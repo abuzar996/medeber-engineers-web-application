@@ -52,9 +52,13 @@ const TextArea: React.FC<TextAreaProps> = ({ styles }) => {
   const { token } = theme.useToken();
   return (
     <h1 style={styles}>
-      <Flex>
-        <span className="text-[#fff] text-4xl">MEDEBER </span>{" "}
-        <span className="text-[#efc75e] ml-[10px] text-4xl">ENGINEERS.</span>
+      <Flex className="xs:max-sm:text-center select-none">
+        <span className="text-[#fff] text-4xl xs:max-sm:text-2xl">
+          MEDEBER{" "}
+        </span>{" "}
+        <span className="text-[#efc75e] ml-[10px] text-4xl xs:max-sm:text-2xl">
+          ENGINEERS.
+        </span>
       </Flex>
       <Flex gap="middle" vertical>
         <Flex flex="1" justify="center">
@@ -63,12 +67,13 @@ const TextArea: React.FC<TextAreaProps> = ({ styles }) => {
               fontWeight: "lighter",
               color: "#fff",
             }}
+            className="xs:max-sm:text-center xs:max-xxs:hidden select-none"
           >
             Your<span className="text-secondary"> Engineering </span> solution
             Partner
           </Typography.Title>
         </Flex>
-        <Flex flex="1" justify="center">
+        <Flex flex="1" justify="center" className="select-none">
           <Flex style={{ width: "50%" }}>
             <Typography.Text
               style={{
@@ -80,11 +85,17 @@ const TextArea: React.FC<TextAreaProps> = ({ styles }) => {
             >
               We provide{" "}
               <span className="text-secondary">
-                high-performance engineering{" "}
+                high-performance engineering
               </span>
-              design, <span className="text-white">consulting</span>,and
-              development services{" "}
-              <span className="text-secondary">across various sectors</span>
+              <span className="xs:max-xxs:hidden text-white">
+                {" "}
+                design, consulting
+              </span>
+              ,and development services{" "}
+              <span className="xs:max-xxs:hidden text-secondary">
+                across various sectors.
+              </span>
+              <span className="xxs:hidden">.</span>
             </Typography.Text>
           </Flex>
         </Flex>
