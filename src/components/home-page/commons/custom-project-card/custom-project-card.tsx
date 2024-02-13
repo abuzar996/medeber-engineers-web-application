@@ -1,7 +1,7 @@
 import { Flex, Typography, theme } from "antd";
 import Img1 from "../../../../assets/Images/img2.png";
-interface CustomProjectCardProps {
-  type: boolean;
+export interface CustomProjectCardProps {
+  type: boolean | "news" | "info";
 }
 const CustomProjectCard: React.FC<CustomProjectCardProps> = ({ type }) => {
   const { token } = theme.useToken();

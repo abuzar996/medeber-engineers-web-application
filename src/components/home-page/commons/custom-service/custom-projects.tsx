@@ -1,11 +1,12 @@
 import { Flex, Typography, theme } from "antd";
+import CustomProjectCard from "../custom-project-card";
 import CustomSlider from "../custom-slider";
 import Project from "../../../../assets/Images/project.png";
 const CustomProjects = () => {
   const { token } = theme.useToken();
   return (
     <Flex
-      className="w-full"
+      className="w-full pb-[170px]"
       align="center"
       flex={1}
       gap="large"
@@ -59,7 +60,7 @@ const CustomProjects = () => {
           </Flex>
         </Flex>
       </Flex>
-      <CustomSlider type={false} />
+      <CustomSlider type={false} Child={CustomProjectCard} />
     </Flex>
   );
 };

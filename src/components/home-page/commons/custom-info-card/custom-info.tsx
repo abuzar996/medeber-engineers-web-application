@@ -2,7 +2,7 @@ import { Flex, Typography, theme } from "antd";
 
 import Person from "../../../../assets/Images/person.png";
 interface CustomProjectCardProps {
-  type: "info" | "news";
+  type: boolean | "info" | "news";
 }
 
 const NewsTypedCard = () => {
