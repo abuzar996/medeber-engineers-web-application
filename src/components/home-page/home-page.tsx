@@ -3,7 +3,6 @@ import { Flex } from "antd";
 import Footer from "./containers/footer";
 
 import NewsLetter from "./containers/news-letter";
-//import CustomService from "./commons/custom-service/custom-service";
 import { Outlet } from "react-router-dom";
 const HomePage = () => {
   return (
