@@ -5,7 +5,10 @@ const CustomServiceIntro = () => {
   return (
     <Flex
       flex="1"
-      style={{ padding: token.paddingSM, width: "90%" }}
+      style={{
+        padding: token.paddingSM,
+        width: "90%",
+      }}
       className="select-none xs:max-sm:flex-col "
     >
       <Flex flex="1" className="xs:max-sm:justify-center">
