@@ -7,7 +7,7 @@ const Testimonial = () => {
     <Flex
       align="center"
       vertical
-      className="pb-[100px] pt-[100px] shadow-[0px_-2px_10px_5px_gray]"
+      className="pb-[100px] pt-[100px] shadow-[0px_-2px_10px_5px_gray] select-none"
       gap="large"
       style={{
         background:

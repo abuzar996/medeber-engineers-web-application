@@ -5,6 +5,8 @@ import CustomProjects from "./custom-projects";
 import CustomNews from "./custom-news-section";
 import CustomInfo from "./custom-info-section";
 import CustomOthers from "../custom-others/custom-others";
+
+import CustomPortfolio from "./custom-portfolio";
 const CustomService = () => {
   return (
     <Flex className="w-full" flex="1" vertical align="center">
@@ -12,8 +14,10 @@ const CustomService = () => {
       <CustomServiceIntro />
       <CustomProjects />
       <CustomInfo />
-      <CustomNews />
       <CustomOthers />
+      <CustomNews />
+
+      <CustomPortfolio />
     </Flex>
   );
 };

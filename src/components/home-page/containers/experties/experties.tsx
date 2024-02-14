@@ -8,7 +8,7 @@ const Experties = () => {
   return (
     <Flex
       flex="1"
-      className=" pb-[100px] pt-[50px]"
+      className=" pb-[100px] pt-[50px] select-none"
       style={{
         background:
           "linear-gradient(to bottom,gray 0%,gray 40%,white 50%,white 100%)",

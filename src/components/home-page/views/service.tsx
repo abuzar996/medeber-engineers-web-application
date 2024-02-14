@@ -1,9 +1,8 @@
-import CustomContainer from "../commons/custom-container";
-import { servicesData } from "../utills/data";
+import { Outlet } from "react-router-dom";
 const Services = () => {
   return (
     <>
-      <CustomContainer data={servicesData} />
+      <Outlet />
     </>
   );
 };

@@ -36,7 +36,7 @@ const CustomProjects = () => {
                     padding: token.paddingSM,
                     fontStyle: "italic",
                   }}
-                  className="text-primary"
+                  className="text-primary select-none"
                 >
                   Projects
                 </Typography.Text>
@@ -51,7 +51,7 @@ const CustomProjects = () => {
                 padding: token.paddingSM,
                 //fontStyle: "italic",
               }}
-              className="text-primary text-center"
+              className="text-primary text-center select-none"
             >
               Opertaions keep the lights on, strategy provides a light at the
               end of the tunnel, but project management is the train engine that
