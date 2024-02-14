@@ -21,6 +21,7 @@ import { DefaultOptionType } from "antd/es/select";
 import { items } from "../../utills/data";
 const rootSubmenuKeys = ["1"];
 import "../../layout/scroll.css";
+
 interface NavContentProps {
   isOpen?: boolean;
   setIsOpen?: (val: boolean) => void;
@@ -54,13 +55,13 @@ const NavContent: React.FC<NavContentProps> = ({
     setMenuActive(false);
   };
 
-  const handleMenuClick: MenuProps["onClick"] = (e) => {
-    if (e.key === "3") {
-      // setOpen(false);
-    }
+  const handleMenuClick: MenuProps["onClick"] = (info) => {
+    const route = navData!.items.find(
+      (item: DefaultOptionType) => item.key === info.key
+    ).routes;
+    navigate(navData!.route + "/" + route);
   };
   const handleVisitClicked = () => {
-    //setOpen(false);
     setOpenKeys([""]);
     setIsOpen && setIsOpen(false);
     navigate(navData!.route);

@@ -18,6 +18,7 @@ import Project1 from "../../../assets/Images/project1.png";
 import Project2 from "../../../assets/Images/project2.png";
 import Project3 from "../../../assets/Images/project3.png";
 import Market from "../../../assets/Images/main5.png";
+import { VscSymbolStructure } from "react-icons/vsc";
 import { Flex, Card, Typography } from "antd";
 import { DefaultOptionType } from "antd/es/select";
 import { IoIosPeople } from "react-icons/io";
@@ -65,6 +66,23 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      data: {
+        head: "Structural Engineering",
+        image: Structural,
+        label: "Engineering Stability",
+        Icon: <VscSymbolStructure />,
+      },
+      projects: [
+        { name: "Structural Engineering", Image: Market },
+        { name: "Structural Engineering", Image: Market },
+      ],
+      intro: {
+        intro1:
+          "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
+        intro2:
+          "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
+      },
+      routes: "electrical-engineering",
       key: "1",
     },
     {
@@ -78,6 +96,23 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      projects: [
+        { name: "Structural Engineering", Image: Market },
+        { name: "Structural Engineering", Image: Market },
+      ],
+      data: {
+        head: "Structural Engineering",
+        image: Structural,
+        label: "Engineering Stability",
+        Icon: <VscSymbolStructure />,
+      },
+      intro: {
+        intro1:
+          "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
+        intro2:
+          "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
+      },
+      routes: "mechanical-engineering",
       key: "2",
     },
     {
@@ -91,6 +126,23 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      projects: [
+        { name: "Structural Engineering", Image: Market },
+        { name: "Structural Engineering", Image: Market },
+      ],
+      data: {
+        head: "Structural Engineering",
+        image: Structural,
+        label: "Engineering Stability",
+        Icon: <VscSymbolStructure />,
+      },
+      intro: {
+        intro1:
+          "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
+        intro2:
+          "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
+      },
+      routes: "structural-engineering",
       key: "3",
     },
     {
@@ -104,6 +156,23 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      projects: [
+        { name: "Structural Engineering", Image: Market },
+        { name: "Structural Engineering", Image: Market },
+      ],
+      intro: {
+        intro1:
+          "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
+        intro2:
+          "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
+      },
+      data: {
+        head: "Structural Engineering",
+        image: Structural,
+        label: "Engineering Stability",
+        Icon: <VscSymbolStructure />,
+      },
+      routes: "software-development",
       key: "4",
     },
     {
@@ -117,6 +186,23 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      projects: [
+        { name: "Structural Engineering", Image: Market },
+        { name: "Structural Engineering", Image: Market },
+      ],
+      intro: {
+        intro1:
+          "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
+        intro2:
+          "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
+      },
+      data: {
+        head: "Structural Engineering",
+        image: Structural,
+        label: "Engineering Stability",
+        Icon: <VscSymbolStructure />,
+      },
+      routes: "energy-services",
       key: "5",
     },
     {
@@ -130,6 +216,23 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      projects: [
+        { name: "Structural Engineering", Image: Market },
+        { name: "Structural Engineering", Image: Market },
+      ],
+      intro: {
+        intro1:
+          "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
+        intro2:
+          "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
+      },
+      data: {
+        head: "Structural Engineering",
+        image: Structural,
+        label: "Engineering Stability",
+        Icon: <VscSymbolStructure />,
+      },
+      routes: "technology",
       key: "6",
     },
     {
@@ -143,6 +246,23 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      projects: [
+        { name: "Structural Engineering", Image: Market },
+        { name: "Structural Engineering", Image: Market },
+      ],
+      intro: {
+        intro1:
+          "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
+        intro2:
+          "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
+      },
+      data: {
+        head: "Structural Engineering",
+        image: Structural,
+        label: "Engineering Stability",
+        Icon: <VscSymbolStructure />,
+      },
+      routes: "manufacturing",
       key: "7",
     },
   ],
@@ -156,6 +276,7 @@ export const portfolio: DefaultOptionType = {
       <TbFileDescription />
     </Icons>
   ),
+
   route: "/services",
   items: [
     {

@@ -1,11 +1,12 @@
 import { Flex, Typography, theme } from "antd";
 
-import Person from "../../../../assets/Images/person.png";
 interface CustomProjectCardProps {
   type: boolean | "info" | "news";
+  projectName: string;
+  image: string;
 }
 
-const NewsTypedCard = () => {
+const NewsTypedCard = ({ projectName }: { projectName: string }) => {
   const { token } = theme.useToken();
   return (
     <Flex flex="1" vertical>
@@ -30,7 +31,7 @@ const NewsTypedCard = () => {
             fontWeight: token.fontWeightStrong,
           }}
         >
-          NEWS
+          {projectName}
         </Typography.Text>
       </Flex>
       <Flex
@@ -52,7 +53,7 @@ const NewsTypedCard = () => {
   );
 };
 
-const InfoTypedCard = () => {
+const InfoTypedCard = ({ projectName }: { projectName: string }) => {
   const { token } = theme.useToken();
   return (
     <>
@@ -64,7 +65,7 @@ const InfoTypedCard = () => {
             fontWeight: token.fontWeightStrong,
           }}
         >
-          Project Name
+          {projectName}
         </Typography.Text>
 
         <Typography.Text
@@ -108,7 +109,11 @@ const InfoTypedCard = () => {
     </>
   );
 };
-const CustomInfoCard: React.FC<CustomProjectCardProps> = ({ type }) => {
+const CustomInfoCard: React.FC<CustomProjectCardProps> = ({
+  type,
+  projectName,
+  image,
+}) => {
   const { token } = theme.useToken();
   return (
     <Flex
@@ -123,7 +128,7 @@ const CustomInfoCard: React.FC<CustomProjectCardProps> = ({ type }) => {
       <Flex flex="1">
         <img
           className="w-full"
-          src={Person}
+          src={image}
           style={{
             height: "300px",
             borderRadius: token.borderRadiusLG,
@@ -131,8 +136,8 @@ const CustomInfoCard: React.FC<CustomProjectCardProps> = ({ type }) => {
         />
       </Flex>
 
-      {type === "news" && <NewsTypedCard />}
-      {type === "info" && <InfoTypedCard />}
+      {type === "news" && <NewsTypedCard projectName={projectName} />}
+      {type === "info" && <InfoTypedCard projectName={projectName} />}
     </Flex>
   );
 };

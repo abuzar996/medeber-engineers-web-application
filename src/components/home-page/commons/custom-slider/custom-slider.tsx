@@ -1,14 +1,18 @@
-//import CustomProjectCard from "../custom-project-card";
 import { Flex, theme } from "antd";
-
 import type { PaginationProps } from "antd";
 import { Pagination } from "antd";
 import "../../layout/scroll.css";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { useRef, useState } from "react";
+import Image from "../../../../assets/Images/img2.png";
 interface CustomSliderProps {
   type: boolean | "news" | "info";
-  Child: React.FC<{ type: boolean | "news" | "info" }>;
+  Child: React.FC<{
+    type: boolean | "news" | "info";
+    projectName: string;
+    image: string;
+  }>;
+  //   data:
 }
 const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child }) => {
   const flexRef = useRef<HTMLInputElement>(null);
@@ -70,30 +74,11 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child }) => {
           gap="large"
         >
           <Flex className="sm:max-w-[450px] sm:min-w-[450px] ">
-            <Child type={type} />
+            <Child type={type} projectName="name" image={Image} />
           </Flex>
           <Flex className="sm:max-w-[450px] sm:min-w-[450px] ">
-            <Child type={type} />
+            <Child type={type} projectName="name" image={Image} />
           </Flex>
-          {/* <Flex className="sm:max-w-[450px] sm:min-w-[450px] ">
-            <Child type={type} />
-          </Flex> */}
-          {/*<Flex className="sm:max-w-[450px] sm:min-w-[450px] ">
-            <Child type={type} />
-          </Flex> */}
-
-          {/* <Flex style={{ minWidth: "450px" }}>
-            <Child type={type} />
-          </Flex>
-          <Flex style={{ minWidth: "450px" }}>
-            <Child type={type} />
-          </Flex>
-          <Flex style={{ minWidth: "450px" }}>
-            <Child type={type} />
-          </Flex>
-          <Flex style={{ minWidth: "450px" }}>
-            <Child type={type} />
-          </Flex> */}
         </Flex>
       </Flex>
       {length > 2 && (
@@ -118,7 +103,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child }) => {
         </Flex>
       )}
       <Flex className="sm:hidden" vertical>
-        <Child type={type} />
+        <Child type={type} projectName="name" image={Image} />
         <Flex className="w-[100%]" style={{ padding: token.paddingXS }}>
           <Pagination
             size="small"

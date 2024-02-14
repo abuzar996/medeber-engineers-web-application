@@ -1,7 +1,16 @@
 import { Flex, Typography, theme, Divider, ConfigProvider } from "antd";
-import { VscSymbolStructure } from "react-icons/vsc";
-import Structure from "../../../../assets/Images/services/structural.png";
-const CustomServiceHead = () => {
+export interface CustomServiceHeadProps {
+  head: string;
+  label: string;
+  image: string;
+  Icon: React.ReactNode;
+}
+const CustomServiceHead: React.FC<CustomServiceHeadProps> = ({
+  head,
+  label,
+  image,
+  Icon,
+}) => {
   const { token } = theme.useToken();
   return (
     <Flex className="select-none xs:max-sm:flex-col-reverse h-full w-[90%] xs:max-sm:w-[100%] xs:max-sm:p-0 p-[10px] pt-[100px] ">
@@ -33,11 +42,11 @@ const CustomServiceHead = () => {
             <div
               style={{
                 border: "1px solid gray",
-                padding: token.paddingXS,
+                padding: token.paddingSM,
                 borderRadius: "50%",
               }}
             >
-              <VscSymbolStructure size="25" />
+              {Icon}
             </div>
             <Typography.Text
               style={{
@@ -46,7 +55,7 @@ const CustomServiceHead = () => {
               }}
               className="xs:max-sm:text-center"
             >
-              Structural Engineering
+              {head}
             </Typography.Text>
           </Flex>
           <ConfigProvider
@@ -62,12 +71,12 @@ const CustomServiceHead = () => {
             style={{ fontStyle: "italic" }}
             className="xs:max-sm:text-center"
           >
-            Engineering Stability
+            {label}
           </Typography.Title>
         </Flex>
       </Flex>
       <Flex flex="1" className="p-[5px] xs:max-sm:p-[0]">
-        <img src={Structure} className="h-[300px] w-full" />
+        <img src={image} className="h-[300px] w-full" />
       </Flex>
     </Flex>
   );

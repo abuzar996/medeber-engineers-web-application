@@ -12,7 +12,7 @@ const SubService = lazy(
   () => import("../components/home-page/views/subService")
 );
 const StructuralEngineering = lazy(
-  () => import("../components/home-page/views/structural-engineering")
+  () => import("../components/home-page/views/sub-services")
 );
 // const CustomServices = lazy(
 //   () => import("../components/home-page/commons/custom-service/custom-service")
@@ -70,7 +70,7 @@ const routes: RouteObject[] = [
                 ),
               },
               {
-                path: "/services/structural-engineering",
+                path: "/services/:childRoute",
                 element: (
                   <Suspense fallback={<FullscreenSpinner />}>
                     <StructuralEngineering />

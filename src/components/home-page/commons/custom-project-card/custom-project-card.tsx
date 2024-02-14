@@ -2,8 +2,12 @@ import { Flex, Typography, theme } from "antd";
 import Img1 from "../../../../assets/Images/img2.png";
 export interface CustomProjectCardProps {
   type: boolean | "news" | "info";
+  projectName: string;
 }
-const CustomProjectCard: React.FC<CustomProjectCardProps> = ({ type }) => {
+const CustomProjectCard: React.FC<CustomProjectCardProps> = ({
+  type,
+  projectName,
+}) => {
   const { token } = theme.useToken();
   return (
     <Flex
@@ -33,7 +37,6 @@ const CustomProjectCard: React.FC<CustomProjectCardProps> = ({ type }) => {
             style={{
               fontSize: token.fontSizeHeading5,
               color: "#efc75e",
-              // fontWeight: token.fontWeightStrong,
             }}
           >
             Hello this is project description
@@ -48,7 +51,7 @@ const CustomProjectCard: React.FC<CustomProjectCardProps> = ({ type }) => {
             fontWeight: token.fontWeightStrong,
           }}
         >
-          Project Name
+          {projectName}
         </Typography.Text>
       </Flex>
     </Flex>

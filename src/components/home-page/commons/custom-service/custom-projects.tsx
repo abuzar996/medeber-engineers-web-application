@@ -47,9 +47,7 @@ const CustomProjects = () => {
             <Typography.Text
               style={{
                 fontSize: token.fontSizeHeading3,
-                //fontWeight: token.fontWeightStrong,
                 padding: token.paddingSM,
-                //fontStyle: "italic",
               }}
               className="text-primary text-center select-none"
             >
