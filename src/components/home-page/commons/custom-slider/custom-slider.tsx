@@ -118,7 +118,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child }) => {
         </Flex>
       )}
       <Flex className="sm:hidden" vertical>
-        {/* <Child type={type} /> */}
+        <Child type={type} />
         <Flex className="w-[100%]" style={{ padding: token.paddingXS }}>
           <Pagination
             size="small"
