@@ -12,7 +12,6 @@ interface CustomSliderProps {
     projectName: string;
     image: string;
   }>;
-  //   data:
 }
 const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child }) => {
   const flexRef = useRef<HTMLInputElement>(null);
