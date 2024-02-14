@@ -19,7 +19,7 @@ function App() {
   ScrollToTop();
   return (
     <div className="app">
-      <Outlet />;{/* <HomePage /> */}
+      <Outlet />
     </div>
   );
 }
