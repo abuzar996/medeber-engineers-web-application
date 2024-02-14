@@ -82,7 +82,10 @@ const CustomInfoSlider: React.FC<CustomSliderProps> = ({ type, data }) => {
         >
           {data &&
             data.map((d, index) => (
-              <Flex key={index} className="sm:max-w-[450px] sm:min-w-[450px] ">
+              <Flex
+                key={index}
+                className="sm:max-w-[450px] sm:min-w-[450px] h-full"
+              >
                 <CustomInfoCard
                   type={type}
                   name={d.name}

@@ -1,8 +1,17 @@
 import { Flex, Typography, theme } from "antd";
 import CustomPortfolioCard from "../../custom-portfolio-card";
-import Img1 from "../../../../../assets/Images/img1.png";
+
 import { IoMdArrowRoundForward } from "react-icons/io";
-const CustomPortfolio = () => {
+export interface CustomPortfolioProps {
+  label: string | undefined;
+  desc: string | undefined;
+  image: string | undefined;
+}
+const CustomPortfolio: React.FC<CustomPortfolioProps> = ({
+  label,
+  desc,
+  image,
+}) => {
   const { token } = theme.useToken();
   return (
     <Flex
@@ -12,14 +21,18 @@ const CustomPortfolio = () => {
       align="center"
       vertical
       gap="small"
+      style={{ boxSizing: "content-box" }}
     >
-      <Flex className="sm:w-[95%] pb-[50px]">
+      <Flex
+        className="sm:w-[95%] pb-[50px]"
+        style={{ padding: token.paddingSM, boxSizing: "content-box" }}
+      >
         <CustomPortfolioCard
           data={{
             id: "1",
-            serviceImage: Img1,
-            headDescription: "hello world ",
-            label: "hello",
+            serviceImage: image!,
+            headDescription: desc!,
+            label: label!,
           }}
         />
       </Flex>
@@ -35,6 +48,7 @@ const CustomPortfolio = () => {
                 fontSize: token.fontSizeHeading1,
                 fontWeight: token.fontWeightStrong,
                 color: "#efc75e",
+                textAlign: "center",
               }}
             >
               View Our Portfolio.

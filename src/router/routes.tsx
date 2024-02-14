@@ -7,6 +7,7 @@ import { RouteObject } from "react-router-dom";
 const HomePage = lazy(() => import("../components/home-page"));
 const Main = lazy(() => import("../components/home-page/views/home"));
 const Market = lazy(() => import("../components/home-page/views/market"));
+const Experts = lazy(() => import("../components/home-page/views/expert"));
 const Services = lazy(() => import("../components/home-page/views/service"));
 const SubService = lazy(
   () => import("../components/home-page/views/subService")
@@ -50,6 +51,14 @@ const routes: RouteObject[] = [
             element: (
               <Suspense fallback={<FullscreenSpinner />}>
                 <Market />
+              </Suspense>
+            ),
+          },
+          {
+            path: "/expertise",
+            element: (
+              <Suspense fallback={<FullscreenSpinner />}>
+                <Experts />
               </Suspense>
             ),
           },

@@ -25,8 +25,8 @@ const NewsTypedCard = ({
   return (
     <Flex flex="1" vertical>
       <Flex
-        flex="1"
         justify="space-between"
+        className="h-fit"
         style={{ border: "1px solid #efc75e", padding: token.paddingSM }}
       >
         <Typography.Text

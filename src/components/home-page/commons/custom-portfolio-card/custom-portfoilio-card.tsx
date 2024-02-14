@@ -34,7 +34,7 @@ const CustomCard: React.FC<CustomCardProps> = ({ data }) => {
           align="center"
           className={`${
             onHover ? "blur-sm" : ""
-          } relative min-w-[400px] min-h-[300px] xs:max-sm:max-w-[calc(100vw_-_2px)] xs:max-sm:min-w-[calc(100vw_-_2px)]`}
+          } relative min-w-[400px] min-h-[300px] xs:max-sm:max-w-[calc(100vw_-_30px)] xs:max-sm:min-w-[calc(100vw_-_30px)]`}
         >
           <div className="absolute z-50">
             <IoMdArrowRoundForward
@@ -48,8 +48,9 @@ const CustomCard: React.FC<CustomCardProps> = ({ data }) => {
           <Flex vertical className="w-[100%]">
             <Flex
               flex="1"
-              justify="flex-start"
+              justify="center"
               style={{ padding: token.paddingXS }}
+              align="center"
             >
               <Typography.Title
                 style={{
@@ -78,6 +79,7 @@ const CustomCard: React.FC<CustomCardProps> = ({ data }) => {
           <Flex
             flex="1"
             className="w-full"
+            align="center"
             style={{ padding: token.paddingXS }}
           >
             <Typography.Text

@@ -40,7 +40,7 @@ const CustomContainers: React.FC<CustomContainerProps> = ({ data }) => {
           <Typography.Text
             style={{
               fontSize: token.fontSizeHeading3,
-              color: "#1b1247",
+              color: "#efc75e",
               fontWeight: token.fontWeightStrong,
             }}
           >

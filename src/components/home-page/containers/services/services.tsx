@@ -3,7 +3,9 @@ import { theme, Flex, Typography } from "antd";
 import { servicesData } from "../../utills/data";
 import List from "../../commons/custom-card-list";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 const Services = () => {
+  const navigate = useNavigate();
   const { token } = theme.useToken();
   return (
     <Flex
@@ -44,6 +46,7 @@ const Services = () => {
               <Typography.Text
                 style={{ fontSize: token.fontSizeHeading4 }}
                 className="hover:underline text-primary"
+                onClick={() => navigate("services")}
               >
                 Explore our services
               </Typography.Text>

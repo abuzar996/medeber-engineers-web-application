@@ -4,7 +4,7 @@ import { Pagination } from "antd";
 import "../../layout/scroll.css";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { useRef, useState } from "react";
-import Image from "../../../../assets/Images/img2.png";
+
 interface CustomSliderProps {
   type: boolean | "news" | "info";
   data: { name: string; Image: string; desc?: string }[];
@@ -32,8 +32,8 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child, data }) => {
   const flexRef = useRef<HTMLInputElement>(null);
   const { token } = theme.useToken();
   const [left, setLeft] = useState(0);
-  const [current, setCurrent] = useState(3);
-
+  const [current, setCurrent] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
   const handleNextClick = () => {
     setLeft((left) => left + 30);
     if (flexRef.current) {
@@ -42,8 +42,8 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child, data }) => {
   };
 
   const onChange: PaginationProps["onChange"] = (page) => {
-    console.log(page);
     setCurrent(page);
+    setActiveIndex(page - 1);
   };
 
   const handlePreviousClicked = () => {
@@ -91,7 +91,11 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child, data }) => {
         >
           {data &&
             data.map((d, index) => (
-              <Flex key={index} className="sm:max-w-[450px] sm:min-w-[450px] ">
+              <Flex
+                key={index}
+                className="sm:max-w-[450px] sm:min-w-[450px] h-full"
+                flex="1"
+              >
                 <Child
                   type={type}
                   projectName={d.name}
@@ -123,14 +127,19 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child, data }) => {
           />
         </Flex>
       )}
-      <Flex className="sm:hidden" vertical>
-        <Child type={type} projectName="name" image={Image} />
-        <Flex className="w-[100%]" style={{ padding: token.paddingXS }}>
+      <Flex className="sm:hidden" vertical flex="1">
+        <Child
+          type={type}
+          name={data[activeIndex].name}
+          image={data[activeIndex].Image}
+          desc={data[activeIndex].desc}
+        />
+        <Flex className="w-[100%] " style={{ padding: token.paddingXS }}>
           <Pagination
             size="small"
             current={current}
             onChange={onChange}
-            total={10}
+            total={data.length}
             responsive={true}
             defaultPageSize={1}
             pageSize={1}

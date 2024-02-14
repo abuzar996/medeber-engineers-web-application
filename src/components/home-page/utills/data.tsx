@@ -1,4 +1,15 @@
 import Icons from "../containers/navbar/icons";
+import Person from "../../../assets/Images/person.png";
+import Experts from "../../../assets/Images/experts.png";
+import Expertise from "../../../assets/Images/expertise.png";
+import History from "../../../assets/Images/history.jpeg";
+import Disaster from "../../../assets/Images/disaster.jpeg";
+import Distribution from "../../../assets/Images/distribution.jpeg";
+import Building from "../../../assets/Images/build.png";
+import Sustainable from "../../../assets/Images/sustainable.png";
+import Planning from "../../../assets/Images/planning.png";
+import { IoWifiOutline } from "react-icons/io5";
+import { FaRegLightbulb } from "react-icons/fa";
 import Education from "../../../assets/Images/markets/education.png";
 import Commercial from "../../../assets/Images/markets/commercial.png";
 import Entertainment from "../../../assets/Images/markets/entertainment.png";
@@ -67,65 +78,114 @@ export const services: DefaultOptionType = {
         </Card>
       ),
       data: {
-        head: "Structural Engineering",
-        image: Structural,
-        label: "Engineering Stability",
-        Icon: <VscSymbolStructure />,
+        head: "Electical Engineering",
+        image: Electrical,
+        label: "Engineering & Electrics",
+        Icon: <MdElectricBolt />,
       },
-      projects: [
-        { name: "Structural Engineering", Image: Structural },
-        { name: "Structural Engineering", Image: Market },
-        { name: "Structural Engineering", Image: Market },
-      ],
-      news: [
-        {
-          name: "NEWS",
-          image: Structural,
-          date: "January 24, 2023.",
-          desc: "This is the News",
-        },
-        {
-          name: "NEWS",
-          image: Structural,
-          date: "January 24, 2023.",
-          desc: "This is the News",
-        },
-        {
-          name: "NEWS",
-          image: Structural,
-          date: "January 24, 2023.",
-          desc: "This is the News",
-        },
-      ],
       leaders: [
         {
-          name: "Thomas",
-          image: Structural,
-          designations: "XYZ",
-          location: "xyz",
-          occupations: "abc",
+          image: Person,
+          name: "A. Brian Lomal",
+
+          designations: "Principal | Director of PEAK Institute",
+          location: "Deerfield Beach, Florida",
+          occupations: "PE, LEED FELLOW WELL AP",
         },
         {
-          name: "Medeber",
-          image: Structural,
-          designations: "XYZ",
-          location: "xyz",
-          occupations: "abc",
+          image: Person,
+          name: "Mark A. Gelfo",
+
+          designations: "Managing Principal",
+          location: "Jacksonville, Florida",
+          occupations: "PE, CXA, LEED FELLOW, EMP",
         },
         {
-          name: "Fess",
-          image: Structural,
-          designations: "XYZ",
-          location: "xyz",
-          occupations: "abc",
+          image: Person,
+          name: "David V. Miller",
+
+          designations: "Managing Principal | Operations Manager",
+          location: "Atlanta, Georgia",
+          occupations: "PE, CXA, LEED AP BD+C, EMP",
+        },
+        {
+          image: Person,
+          name: "Chad Griffith",
+
+          designations: "Principal | PEAK Institute",
+          location: "Melbourne, Florida",
+          occupations: "PE, CXA, LEED AP BD+C, EMP",
         },
       ],
+      projects: [
+        {
+          name: "Tampa International Airport (TPA) Curbside Expansion and Central Utility Plant",
+          Image: Market,
+        },
+        {
+          name: "North American Portfolio Sustainability Consulting",
+          Image: Market,
+        },
+        {
+          name: "JEA Headquarters",
+          Image: Market,
+        },
+        {
+          name: "City of Orlando Energy Efficiency Improvements Phases 1 and 2",
+          Image: Market,
+        },
+        {
+          name: "Florida Polytechnic University Health and Wellness Audits",
+          Image: Market,
+        },
+        {
+          name: "KPMG Lakehouse",
+          Image: Market,
+        },
+        {
+          name: "Water Street Central District Cooling Plant",
+          Image: Market,
+        },
+        {
+          name: "Lakeland Regional Health Carol Jenkins Barnett Pavilion for Women and Children",
+          Image: Market,
+        },
+        {
+          name: "Omni Louisville Hotel and Residences",
+          Image: Market,
+        },
+      ],
+      portfolio: {
+        image: Electrical,
+        label: "Software Development Portfolio Flipbook",
+        desc: "From the moment a building is completed, it begins to change. Internal and external changes result in energy and water efficiency degrading over time. Using the latest technologies and structured methodologies, TLC's staff of professionals provides a wide array of energy services. Click here to learn more.",
+      },
       intro: {
         intro1:
-          "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
-        intro2:
-          "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
+          "From the moment a building is completed, it begins to change. Internal and external changes result in energy and water efficiency degrading over time.",
+        intro2: `Concurrently, improvements in building technology and systems offer solutions not available at the time of design. Energy audits and retro-commissioning, specialties of TLC, are checkups of building health. 
+          These reviews range from a simple analysis of energy and water costs and rates to investment grade energy audits that help building owners plan for and implement changes created to protect their asset value. `,
       },
+      news: [
+        {
+          image: Market,
+          date: "JANUARY 23, 2024",
+          name: "NEWS",
+          desc: "TLC Engineering Solutions Announces the Promotion of Justin Mulhollan to Regional Director",
+        },
+        {
+          image: Market,
+          date: "DECEMBER 4, 2023",
+          name: "NEWS",
+          desc: "Cheers to 20+ Years!",
+        },
+        {
+          image: Market,
+          date: "NOVEMBER 2, 2023",
+          name: "NEWS",
+          desc: "Veteran’s Day 2023",
+        },
+      ],
       routes: "electrical-engineering",
       key: "1",
     },
@@ -140,22 +200,70 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
-      projects: [
-        { name: "Structural Engineering", Image: Market },
-        { name: "Structural Engineering", Image: Market },
-      ],
       leaders: [
         {
-          name: "abuzar",
-          Image: Structural,
-          designations: "XYZ",
-          location: "xyz",
-          occupations: "abc",
+          image: Person,
+          name: "A. Brian Lomal",
+
+          designations: "Principal | Director of PEAK Institute",
+          location: "Deerfield Beach, Florida",
+          occupations: "PE, LEED FELLOW WELL AP",
+        },
+      ],
+      projects: [
+        {
+          name: "Tampa International Airport (TPA) Curbside Expansion and Central Utility Plant",
+          Image: Market,
+        },
+        {
+          name: "North American Portfolio Sustainability Consulting",
+          Image: Market,
+        },
+        {
+          name: "JEA Headquarters",
+          Image: Market,
+        },
+        {
+          name: "City of Orlando Energy Efficiency Improvements Phases 1 and 2",
+          Image: Market,
+        },
+        {
+          name: "Florida Polytechnic University Health and Wellness Audits",
+          Image: Market,
+        },
+        {
+          name: "KPMG Lakehouse",
+          Image: Market,
+        },
+        {
+          name: "Water Street Central District Cooling Plant",
+          Image: Market,
+        },
+        {
+          name: "Lakeland Regional Health Carol Jenkins Barnett Pavilion for Women and Children",
+          Image: Market,
+        },
+        {
+          name: "Omni Louisville Hotel and Residences",
+          Image: Market,
+        },
+      ],
+      portfolio: {
+        image: mechanical,
+        label: "Software Development Portfolio Flipbook",
+        desc: "From the moment a building is completed, it begins to change. Internal and external changes result in energy and water efficiency degrading over time. Using the latest technologies and structured methodologies, TLC's staff of professionals provides a wide array of energy services. Click here to learn more.",
+      },
+      news: [
+        {
+          image: Market,
+          date: "JANUARY 23, 2024",
+          name: "NEWS",
+          desc: "TLC Engineering Solutions Announces the Promotion of Justin Mulhollan to Regional Director",
         },
       ],
       data: {
-        head: "Structural Engineering",
-        image: Structural,
+        head: "Mechanical Engineering",
+        image: mechanical,
         label: "Engineering Stability",
         Icon: <VscSymbolStructure />,
       },
@@ -181,16 +289,95 @@ export const services: DefaultOptionType = {
       ),
       leaders: [
         {
-          name: "abuzar",
-          Image: Structural,
-          designations: "XYZ",
-          location: "xyz",
-          occupations: "abc",
+          image: Person,
+          name: "A. Brian Lomal",
+
+          designations: "Principal | Director of PEAK Institute",
+          location: "Deerfield Beach, Florida",
+          occupations: "PE, LEED FELLOW WELL AP",
+        },
+        {
+          image: Person,
+          name: "Mark A. Gelfo",
+
+          designations: "Managing Principal",
+          location: "Jacksonville, Florida",
+          occupations: "PE, CXA, LEED FELLOW, EMP",
+        },
+        {
+          image: Person,
+          name: "David V. Miller",
+
+          designations: "Managing Principal | Operations Manager",
+          location: "Atlanta, Georgia",
+          occupations: "PE, CXA, LEED AP BD+C, EMP",
+        },
+        {
+          image: Person,
+          name: "Chad Griffith",
+
+          designations: "Principal | PEAK Institute",
+          location: "Melbourne, Florida",
+          occupations: "PE, CXA, LEED AP BD+C, EMP",
         },
       ],
       projects: [
-        { name: "Structural Engineering", Image: Market },
-        { name: "Structural Engineering", Image: Market },
+        {
+          name: "Tampa International Airport (TPA) Curbside Expansion and Central Utility Plant",
+          Image: Market,
+        },
+        {
+          name: "North American Portfolio Sustainability Consulting",
+          Image: Market,
+        },
+        {
+          name: "JEA Headquarters",
+          Image: Market,
+        },
+        {
+          name: "City of Orlando Energy Efficiency Improvements Phases 1 and 2",
+          Image: Market,
+        },
+        {
+          name: "Florida Polytechnic University Health and Wellness Audits",
+          Image: Market,
+        },
+        {
+          name: "KPMG Lakehouse",
+          Image: Market,
+        },
+        {
+          name: "Water Street Central District Cooling Plant",
+          Image: Market,
+        },
+        {
+          name: "Lakeland Regional Health Carol Jenkins Barnett Pavilion for Women and Children",
+          Image: Market,
+        },
+        {
+          name: "Omni Louisville Hotel and Residences",
+          Image: Market,
+        },
+      ],
+      portfolio: {
+        image: Structural,
+        label: "Structual Engineering Flipbook",
+        desc: "From the moment a building is completed, it begins to change. Internal and external changes result in energy and water efficiency degrading over time. Using the latest technologies and structured methodologies, TLC's staff of professionals provides a wide array of energy services. Click here to learn more.",
+      },
+
+      news: [
+        {
+          image: Market,
+          date: "JANUARY 23, 2024",
+          name: "NEWS",
+          desc: "TLC Engineering Solutions Announces the Promotion of Justin Mulhollan to Regional Director",
+        },
+        {
+          image: Market,
+          date: "DECEMBER 4, 2023",
+          name: "NEWS",
+          desc: "Cheers to 20+ Years!",
+        },
       ],
       data: {
         head: "Structural Engineering",
@@ -220,28 +407,113 @@ export const services: DefaultOptionType = {
       ),
       leaders: [
         {
-          name: "abuzar",
-          Image: Structural,
-          designations: "XYZ",
-          location: "xyz",
-          occupations: "abc",
+          image: Person,
+          name: "A. Brian Lomal",
+
+          designations: "Principal | Director of PEAK Institute",
+          location: "Deerfield Beach, Florida",
+          occupations: "PE, LEED FELLOW WELL AP",
+        },
+        {
+          image: Person,
+          name: "Mark A. Gelfo",
+
+          designations: "Managing Principal",
+          location: "Jacksonville, Florida",
+          occupations: "PE, CXA, LEED FELLOW, EMP",
+        },
+        {
+          image: Person,
+          name: "David V. Miller",
+
+          designations: "Managing Principal | Operations Manager",
+          location: "Atlanta, Georgia",
+          occupations: "PE, CXA, LEED AP BD+C, EMP",
+        },
+        {
+          image: Person,
+          name: "Chad Griffith",
+
+          designations: "Principal | PEAK Institute",
+          location: "Melbourne, Florida",
+          occupations: "PE, CXA, LEED AP BD+C, EMP",
         },
       ],
       projects: [
-        { name: "Structural Engineering", Image: Market },
-        { name: "Structural Engineering", Image: Market },
+        {
+          name: "Tampa International Airport (TPA) Curbside Expansion and Central Utility Plant",
+          Image: Market,
+        },
+        {
+          name: "North American Portfolio Sustainability Consulting",
+          Image: Market,
+        },
+        {
+          name: "JEA Headquarters",
+          Image: Market,
+        },
+        {
+          name: "City of Orlando Energy Efficiency Improvements Phases 1 and 2",
+          Image: Market,
+        },
+        {
+          name: "Florida Polytechnic University Health and Wellness Audits",
+          Image: Market,
+        },
+        {
+          name: "KPMG Lakehouse",
+          Image: Market,
+        },
+        {
+          name: "Water Street Central District Cooling Plant",
+          Image: Market,
+        },
+        {
+          name: "Lakeland Regional Health Carol Jenkins Barnett Pavilion for Women and Children",
+          Image: Market,
+        },
+        {
+          name: "Omni Louisville Hotel and Residences",
+          Image: Market,
+        },
       ],
+      portfolio: {
+        image: Software,
+        label: "Software Development Portfolio Flipbook",
+        desc: "From the moment a building is completed, it begins to change. Internal and external changes result in energy and water efficiency degrading over time. Using the latest technologies and structured methodologies, TLC's staff of professionals provides a wide array of energy services. Click here to learn more.",
+      },
       intro: {
         intro1:
-          "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
-        intro2:
-          "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
+          "From the moment a building is completed, it begins to change. Internal and external changes result in energy and water efficiency degrading over time.",
+        intro2: `Concurrently, improvements in building technology and systems offer solutions not available at the time of design. Energy audits and retro-commissioning, specialties of TLC, are checkups of building health. 
+          These reviews range from a simple analysis of energy and water costs and rates to investment grade energy audits that help building owners plan for and implement changes created to protect their asset value. `,
       },
+      news: [
+        {
+          image: Market,
+          date: "JANUARY 23, 2024",
+          name: "NEWS",
+          desc: "TLC Engineering Solutions Announces the Promotion of Justin Mulhollan to Regional Director",
+        },
+        {
+          image: Market,
+          date: "DECEMBER 4, 2023",
+          name: "NEWS",
+          desc: "Cheers to 20+ Years!",
+        },
+        {
+          image: Market,
+          date: "NOVEMBER 2, 2023",
+          name: "NEWS",
+          desc: "Veteran’s Day 2023",
+        },
+      ],
       data: {
-        head: "Structural Engineering",
-        image: Structural,
-        label: "Engineering Stability",
-        Icon: <VscSymbolStructure />,
+        head: "Software Development",
+        image: Software,
+        label: "Computer Software Engineering",
+
+        Icon: <SiBmcsoftware />,
       },
       routes: "software-development",
       key: "4",
@@ -259,28 +531,112 @@ export const services: DefaultOptionType = {
       ),
       leaders: [
         {
-          name: "abuzar",
-          Image: Structural,
-          designations: "XYZ",
-          location: "xyz",
-          occupations: "abc",
+          image: Person,
+          name: "A. Brian Lomal",
+
+          designations: "Principal | Director of PEAK Institute",
+          location: "Deerfield Beach, Florida",
+          occupations: "PE, LEED FELLOW WELL AP",
+        },
+        {
+          image: Person,
+          name: "Mark A. Gelfo",
+
+          designations: "Managing Principal",
+          location: "Jacksonville, Florida",
+          occupations: "PE, CXA, LEED FELLOW, EMP",
+        },
+        {
+          image: Person,
+          name: "David V. Miller",
+
+          designations: "Managing Principal | Operations Manager",
+          location: "Atlanta, Georgia",
+          occupations: "PE, CXA, LEED AP BD+C, EMP",
+        },
+        {
+          image: Person,
+          name: "Chad Griffith",
+
+          designations: "Principal | PEAK Institute",
+          location: "Melbourne, Florida",
+          occupations: "PE, CXA, LEED AP BD+C, EMP",
         },
       ],
       projects: [
-        { name: "Structural Engineering", Image: Market },
-        { name: "Structural Engineering", Image: Market },
+        {
+          name: "Tampa International Airport (TPA) Curbside Expansion and Central Utility Plant",
+          Image: Market,
+        },
+        {
+          name: "North American Portfolio Sustainability Consulting",
+          Image: Market,
+        },
+        {
+          name: "JEA Headquarters",
+          Image: Market,
+        },
+        {
+          name: "City of Orlando Energy Efficiency Improvements Phases 1 and 2",
+          Image: Market,
+        },
+        {
+          name: "Florida Polytechnic University Health and Wellness Audits",
+          Image: Market,
+        },
+        {
+          name: "KPMG Lakehouse",
+          Image: Market,
+        },
+        {
+          name: "Water Street Central District Cooling Plant",
+          Image: Market,
+        },
+        {
+          name: "Lakeland Regional Health Carol Jenkins Barnett Pavilion for Women and Children",
+          Image: Market,
+        },
+        {
+          name: "Omni Louisville Hotel and Residences",
+          Image: Market,
+        },
       ],
+      portfolio: {
+        image: Energy,
+        label: "Energy Services Portfolio Flipbook",
+        desc: "From the moment a building is completed, it begins to change. Internal and external changes result in energy and water efficiency degrading over time. Using the latest technologies and structured methodologies, TLC's staff of professionals provides a wide array of energy services. Click here to learn more.",
+      },
       intro: {
         intro1:
-          "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
-        intro2:
-          "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
+          "From the moment a building is completed, it begins to change. Internal and external changes result in energy and water efficiency degrading over time.",
+        intro2: `Concurrently, improvements in building technology and systems offer solutions not available at the time of design. Energy audits and retro-commissioning, specialties of TLC, are checkups of building health. 
+          These reviews range from a simple analysis of energy and water costs and rates to investment grade energy audits that help building owners plan for and implement changes created to protect their asset value. `,
       },
+      news: [
+        {
+          image: Market,
+          date: "JANUARY 23, 2024",
+          name: "NEWS",
+          desc: "TLC Engineering Solutions Announces the Promotion of Justin Mulhollan to Regional Director",
+        },
+        {
+          image: Market,
+          date: "DECEMBER 4, 2023",
+          name: "NEWS",
+          desc: "Cheers to 20+ Years!",
+        },
+        {
+          image: Market,
+          date: "NOVEMBER 2, 2023",
+          name: "NEWS",
+          desc: "Veteran’s Day 2023",
+        },
+      ],
       data: {
-        head: "Structural Engineering",
-        image: Structural,
-        label: "Engineering Stability",
-        Icon: <VscSymbolStructure />,
+        head: "Energy Services",
+        image: Energy,
+        label: "Getting the Best Performance from Your Facility",
+        Icon: <FaRegLightbulb />,
       },
       routes: "energy-services",
       key: "5",
@@ -298,29 +654,108 @@ export const services: DefaultOptionType = {
       ),
       leaders: [
         {
-          name: "abuzar",
+          name: "Taw North",
           Image: Structural,
-          designations: "XYZ",
-          location: "xyz",
-          occupations: "abc",
+          occupations: "RCDD, LEED AP",
+          location: "Orilando, Florida",
+          designations: "Principal | Regional Operations Director",
+          image: Market,
+        },
+        {
+          name: "Aaron Rose",
+          Image: Structural,
+          occupations: "RCDD, RTPM",
+          location: "Fort Worth, Texas",
+          designations: "Managing Principal | Operations Manager",
+          image: Market,
+        },
+        {
+          name: "J.D Loring",
+          Image: Structural,
+          //occupations: "RCDD, RTPM",
+          location: "Tampa, Florida",
+          designations: "Eastern Region Market Development",
+          image: Market,
+        },
+        {
+          name: "Ellen Hauser",
+          Image: Structural,
+          //occupations: "RCDD, RTPM",
+          location: "Los Angles, California",
+          designations: "Business Development Representative",
+          image: Market,
         },
       ],
       projects: [
-        { name: "Structural Engineering", Image: Market },
-        { name: "Structural Engineering", Image: Market },
+        {
+          name: "Winter Park Library and Events Center",
+          Image: Market,
+        },
+        {
+          name: "BRO Passenger TerminalImage Courtesy: Corgan Brownsville/South Padre International Airport (BRO) New Passenger Terminal",
+          Image: Market,
+        },
+        {
+          name: "Taneja Center for Surgery at AdventHealth Tampa",
+          Image: Market,
+        },
+        {
+          name: "PHX Terminal 4 S1 ConcourseImage Courtesy: Corgan Phoenix Sky Harbor International Airport (PHX) Terminal 4 S1 Concourse",
+          Image: Market,
+        },
+        {
+          name: "Electronic Arts",
+          Image: Market,
+        },
+        {
+          name: "DFW Department of Public Safety Dallas/Fort Worth International Airport (DFW) Department of Public Safety Headquarters Building",
+          Image: Market,
+        },
+        {
+          name: "DFW Integrated Operations Center",
+          Image: Market,
+        },
+        {
+          name: "AdventHealth Orlando Command Center",
+          Image: Market,
+        },
+      ],
+      news: [
+        {
+          image: Market,
+          date: "JANUARY 23, 2024",
+          name: "NEWS",
+          desc: "TLC Engineering Solutions Announces the Promotion of Justin Mulhollan to Regional Director",
+        },
+        {
+          image: Market,
+          date: "DECEMBER 4, 2023",
+          name: "NEWS",
+          desc: "Cheers to 20+ Years!",
+        },
+        {
+          image: Market,
+          date: "NOVEMBER 2, 2023",
+          name: "NEWS",
+          desc: "Veteran’s Day 2023",
+        },
       ],
       intro: {
         intro1:
-          "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
-        intro2:
-          "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
+          "it’s simple—leveraging technological advancements maximizes the return of your building investment..",
+        intro2: `From highly specialized systems that protect lives in medical facilities to corporate offices requiring productive work environments to education facilities that foster students, technology in buildings makes our lives richer, more productive and buildings more efficient to operate. 
+          Seamless integration of AV, data, security systems and highly specialized systems provide benefits today, as well as the ability to expand and enhance the future—a specialty of our technology staff members. They consider all the possibilities of today and tomorrow to deliver the solutions appropriate to your project. `,
       },
-
+      portfolio: {
+        image: Technology,
+        label: "Technology Portfolio Flipbook",
+        desc: "From the moment a building is completed, it begins to change. Internal and external changes result in energy and water efficiency degrading over time. Using the latest technologies and structured methodologies, TLC's staff of professionals provides a wide array of energy services. Click here to learn more.",
+      },
       data: {
-        head: "Structural Engineering",
-        image: Structural,
-        label: "Engineering Stability",
-        Icon: <VscSymbolStructure />,
+        head: "Technology",
+        image: Technology,
+        label: "21st Century Solutions Today and Planning for Tomorrow",
+        Icon: <IoWifiOutline />,
       },
       routes: "technology",
       key: "6",
@@ -336,30 +771,93 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      intro: {
+        intro1:
+          "From the moment a building is completed, it begins to change. Internal and external changes result in energy and water efficiency degrading over time.",
+        intro2: `Concurrently, improvements in building technology and systems offer solutions not available at the time of design. Energy audits and retro-commissioning, specialties of TLC, are checkups of building health. 
+          These reviews range from a simple analysis of energy and water costs and rates to investment grade energy audits that help building owners plan for and implement changes created to protect their asset value. `,
+      },
       leaders: [
         {
-          name: "abuzar",
-          Image: Structural,
-          designations: "XYZ",
-          location: "xyz",
-          occupations: "abc",
+          image: Person,
+          name: "A. Brian Lomal",
+
+          designations: "Principal | Director of PEAK Institute",
+          location: "Deerfield Beach, Florida",
+          occupations: "PE, LEED FELLOW WELL AP",
+        },
+        {
+          image: Person,
+          name: "Mark A. Gelfo",
+
+          designations: "Managing Principal",
+          location: "Jacksonville, Florida",
+          occupations: "PE, CXA, LEED FELLOW, EMP",
+        },
+        {
+          image: Person,
+          name: "David V. Miller",
+
+          designations: "Managing Principal | Operations Manager",
+          location: "Atlanta, Georgia",
+          occupations: "PE, CXA, LEED AP BD+C, EMP",
+        },
+        {
+          image: Person,
+          name: "Chad Griffith",
+
+          designations: "Principal | PEAK Institute",
+          location: "Melbourne, Florida",
+          occupations: "PE, CXA, LEED AP BD+C, EMP",
         },
       ],
       projects: [
-        { name: "Structural Engineering", Image: Market },
-        { name: "Structural Engineering", Image: Market },
-        { name: "Structural Engineering", Image: Market },
+        {
+          name: "Tampa International Airport (TPA) Curbside Expansion and Central Utility Plant",
+          Image: Market,
+        },
+        {
+          name: "North American Portfolio Sustainability Consulting",
+          Image: Market,
+        },
+        {
+          name: "JEA Headquarters",
+          Image: Market,
+        },
+        {
+          name: "City of Orlando Energy Efficiency Improvements Phases 1 and 2",
+          Image: Market,
+        },
+        {
+          name: "Florida Polytechnic University Health and Wellness Audits",
+          Image: Market,
+        },
+        {
+          name: "KPMG Lakehouse",
+          Image: Market,
+        },
+        {
+          name: "Water Street Central District Cooling Plant",
+          Image: Market,
+        },
+        {
+          name: "Lakeland Regional Health Carol Jenkins Barnett Pavilion for Women and Children",
+          Image: Market,
+        },
+        {
+          name: "Omni Louisville Hotel and Residences",
+          Image: Market,
+        },
       ],
-      intro: {
-        intro1:
-          "Withstanding hurricane force winds and seismic events, meeting the unique demands of themed-entertainment rides, or minimizing vibration in research or performing arts centers are all challenges our structural engineers solve.",
-        intro2:
-          "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
+      portfolio: {
+        image: Manufacturing,
+        label: "Manufacturing Portfolio Flipbook",
+        desc: "From the moment a building is completed, it begins to change. Internal and external changes result in energy and water efficiency degrading over time. Using the latest technologies and structured methodologies, TLC's staff of professionals provides a wide array of energy services. Click here to learn more.",
       },
       data: {
-        head: "Structural Engineering",
-        image: Structural,
-        label: "Engineering Stability",
+        head: "Manufacturing",
+        image: Manufacturing,
+        label: "Manufacturing Plumbing & Engineering",
         Icon: <VscSymbolStructure />,
       },
       routes: "manufacturing",
@@ -790,3 +1288,75 @@ export const testimonial = [
     desc: "This is the description",
   },
 ];
+/////////////////////
+
+export const expertiseData: CustomContainer = {
+  image: Experts,
+  mainLabel: "EXPERTISE",
+  description: "We’ve got experience in a wide variety of industries.",
+  headData: {
+    label: "FEATURED EXPERTISE",
+    subHeading: "High Performance Design / Energy Modeling",
+    headImage: Expertise,
+    headDescription:
+      "Regardless of the building owner’s goal—achieving certification on a third-party rating scale, assuring operational efficiency to maintain financial stability or a commitment to environmental stewardship—TLC Engineering Solutions delivers on high-performance designs..",
+  },
+
+  services: [
+    {
+      id: "11",
+      label: "Historic Preservation",
+      serviceImage: History,
+      headDescription:
+        "Renovation is often more challenging than new construction. And when the building has historic significance, the challenges and approvals often multiply, as does the reward.",
+    },
+
+    {
+      id: "12",
+      label: "Sustainable Building",
+      serviceImage: Sustainable,
+      headDescription:
+        "More than 15 years ago, TLC Engineering helped achieve the first LEED-certified building in Florida.",
+    },
+
+    {
+      id: "13",
+      label: "Master Planning",
+      serviceImage: Planning,
+      headDescription:
+        "Master plans for the long term, whether for a greenfield or congested urban site, set the stage for success.",
+    },
+
+    {
+      id: "14",
+      label: "On Call, Disaster Preparedness & Recovery, and Resiliency",
+      serviceImage: Disaster,
+      headDescription:
+        "MEDEBER Engineering Solutions designs with resiliency in mind.",
+    },
+
+    {
+      id: "15",
+      label: "Manufacturing | Distribution | Industrial Process",
+      serviceImage: Distribution,
+      headDescription:
+        "Our goal is to maximize efficiency while ensuring redundancy in these highly complex facilities.",
+    },
+
+    {
+      id: "16",
+      label: "Smart Buildings",
+      serviceImage: Building,
+      headDescription:
+        "As system designers at TLC, we’re incorporating numerous building technologies into our designs as they become network capable, giving building owners the benefit of better building management.",
+    },
+
+    {
+      id: "17",
+      label: "Infrastructure / Central Energy Plants",
+      serviceImage: Commercial,
+      headDescription:
+        "Real estate developments, corporate, education and health care campuses, and many types of building benefit from efficient centralized energy plants and planned infrastructure across the proposed or existing development.",
+    },
+  ],
+};

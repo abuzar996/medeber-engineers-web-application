@@ -32,10 +32,11 @@ const CustomProjectCard: React.FC<CustomProjectCardProps> = ({
     >
       <Flex flex="1">
         <img
-          className="w-full"
+          className="w-full h-[300px]"
           src={image}
           style={{
-            height: "300px",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
             borderRadius: token.borderRadiusLG,
           }}
         />
@@ -54,12 +55,13 @@ const CustomProjectCard: React.FC<CustomProjectCardProps> = ({
           )}
         </Flex>
       )}
-      <Flex flex="1" style={{ padding: token.paddingXS }}>
+      <Flex flex="1" style={{ padding: token.paddingXS }} align="center">
         <Typography.Text
           style={{
-            fontSize: token.fontSizeHeading3,
+            fontSize: token.fontSizeHeading4,
             color: "#efc75e",
-            fontWeight: token.fontWeightStrong,
+
+            textAlign: "center",
           }}
         >
           {projectName}

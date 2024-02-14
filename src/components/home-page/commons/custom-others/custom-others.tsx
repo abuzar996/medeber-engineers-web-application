@@ -15,7 +15,13 @@ const CustomOthers = () => {
   const [mImage, setMImage] = useState(false);
   const [eImage, setEImage] = useState(false);
   return (
-    <Flex className="w-full justify-center pt-[100px] pb-[100px]">
+    <Flex
+      className="w-full justify-center  pt-[100px] pb-[120px] xs:max-sm:p-[10px] xs:max-sm:pt-[100px] xs:max-sm:pb-[120px]"
+      style={{
+        background:
+          "linear-gradient(to bottom,gray 0%,gray 20%,white 50%,white 80%,grey 90%,gray 100%)",
+      }}
+    >
       <Flex
         className="sm:max-w-[95%] min-h-[300px] xs:max-sm:flex-col"
         flex="1"

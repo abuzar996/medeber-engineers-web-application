@@ -2,8 +2,10 @@ import { Flex, theme, Typography } from "antd";
 import Market from "../../../../assets/Images/main5.png";
 import Expert from "../../../../assets/Images/expertise.png";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 const Experties = () => {
   const { token } = theme.useToken();
+  const navigate = useNavigate();
 
   return (
     <Flex
@@ -50,6 +52,7 @@ const Experties = () => {
             <Typography.Text
               className="text-secondary hover:underline"
               style={{ fontSize: token.fontSizeHeading4 }}
+              onClick={() => navigate("/market")}
             >
               Visit Our Markets
             </Typography.Text>
@@ -75,6 +78,7 @@ const Experties = () => {
             <Typography.Text
               className="text-primary hover:underline"
               style={{ fontSize: token.fontSizeHeading4 }}
+              onClick={() => navigate("/expertise")}
             >
               See Our Expertise
             </Typography.Text>

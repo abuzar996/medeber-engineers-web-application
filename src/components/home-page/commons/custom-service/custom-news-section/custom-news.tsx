@@ -19,11 +19,14 @@ const CustomNewsSection: React.FC<CustomNewsSectionProps> = ({ data }) => {
   const { token } = theme.useToken();
   return (
     <Flex
-      className="w-full pb-[130px] pt-[190px]"
+      className="w-full"
       align="center"
       flex={1}
       gap="large"
       style={{
+        padding: token.paddingSM,
+        paddingTop: "190px",
+        paddingBottom: "130px",
         background: `url(${Project}) no-repeat`,
         backgroundSize: "100%",
       }}

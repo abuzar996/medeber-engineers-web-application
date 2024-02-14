@@ -1,13 +1,19 @@
 import { ConfigProvider, Divider, Flex, Typography, theme } from "antd";
 import { CustomContainerServices } from "../../types";
+import { useNavigate } from "react-router-dom";
 interface CustomCardProps {
   data: CustomContainerServices;
   type: boolean;
 }
 const CustomCard: React.FC<CustomCardProps> = ({ data, type }) => {
+  const route = data.label.replace(" ", "-").toLowerCase();
+  const navigate = useNavigate();
   const { token } = theme.useToken();
   return (
-    <div className="h-[100%] w-full ">
+    <div
+      className="h-[100%] w-full"
+      onClick={() => navigate(`/services/${route}`)}
+    >
       <Flex
         gap="small"
         vertical
