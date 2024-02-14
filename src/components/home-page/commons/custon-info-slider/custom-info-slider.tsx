@@ -4,35 +4,26 @@ import { Pagination } from "antd";
 import "../../layout/scroll.css";
 import { GrNext, GrPrevious } from "react-icons/gr";
 import { useRef, useState } from "react";
-import Image from "../../../../assets/Images/img2.png";
+import CustomInfoCard from "../custom-info-card/custom-info";
 interface CustomSliderProps {
   type: boolean | "news" | "info";
-  data: { name: string; Image: string; desc?: string }[];
-  Child: React.FC<
-    | {
-        type: boolean | "news" | "info";
-        projectName: string;
-        image: string;
-        desc?: string;
-      }
-    | {
-        type: boolean | "info" | "news";
-        projectName?: string;
-        name?: string;
-        image: string;
-        date?: string;
-        desc?: string;
-        designations?: string;
-        location?: string;
-        occupations?: string;
-      }
-  >;
+  data: {
+    projectName?: string;
+    name?: string;
+    image: string;
+    date?: string;
+    desc?: string;
+    designations?: string;
+    location?: string;
+    occupations?: string;
+  }[];
 }
-const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child, data }) => {
+const CustomInfoSlider: React.FC<CustomSliderProps> = ({ type, data }) => {
   const flexRef = useRef<HTMLInputElement>(null);
   const { token } = theme.useToken();
+  const [activeIndex, setActiveIndex] = useState(0);
   const [left, setLeft] = useState(0);
-  const [current, setCurrent] = useState(3);
+  const [current, setCurrent] = useState(1);
 
   const handleNextClick = () => {
     setLeft((left) => left + 30);
@@ -42,8 +33,8 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child, data }) => {
   };
 
   const onChange: PaginationProps["onChange"] = (page) => {
-    console.log(page);
     setCurrent(page);
+    setActiveIndex(page - 1);
   };
 
   const handlePreviousClicked = () => {
@@ -92,11 +83,15 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child, data }) => {
           {data &&
             data.map((d, index) => (
               <Flex key={index} className="sm:max-w-[450px] sm:min-w-[450px] ">
-                <Child
+                <CustomInfoCard
                   type={type}
-                  projectName={d.name}
-                  image={d.Image}
-                  desc={d.desc ? d.desc : ""}
+                  name={d.name}
+                  image={d.image}
+                  date={d.date}
+                  designations={d.designations}
+                  occupations={d.occupations}
+                  desc={d.desc}
+                  location={d.location}
                 />
               </Flex>
             ))}
@@ -124,13 +119,23 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child, data }) => {
         </Flex>
       )}
       <Flex className="sm:hidden" vertical>
-        <Child type={type} projectName="name" image={Image} />
+        <CustomInfoCard
+          type={type}
+          name={data[activeIndex].name}
+          image={data[activeIndex].image}
+          desc={data[activeIndex].desc}
+          occupations={data[activeIndex].occupations}
+          designations={data[activeIndex].designations}
+          date={data[activeIndex].date}
+          location={data[activeIndex].location}
+          projectName={data[activeIndex].projectName}
+        />
         <Flex className="w-[100%]" style={{ padding: token.paddingXS }}>
           <Pagination
             size="small"
             current={current}
             onChange={onChange}
-            total={10}
+            total={data.length}
             responsive={true}
             defaultPageSize={1}
             pageSize={1}
@@ -141,4 +146,4 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ type, Child, data }) => {
   );
 };
 
-export default CustomSlider;
+export default CustomInfoSlider;

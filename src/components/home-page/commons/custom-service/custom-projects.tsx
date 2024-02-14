@@ -2,7 +2,10 @@ import { Flex, Typography, theme } from "antd";
 import CustomProjectCard from "../custom-project-card";
 import CustomSlider from "../custom-slider";
 import Project from "../../../../assets/Images/project.png";
-const CustomProjects = () => {
+interface CustomProjectProps {
+  data: { name: string; Image: string }[];
+}
+const CustomProjects: React.FC<CustomProjectProps> = ({ data }) => {
   const { token } = theme.useToken();
   return (
     <Flex
@@ -58,7 +61,7 @@ const CustomProjects = () => {
           </Flex>
         </Flex>
       </Flex>
-      <CustomSlider type={false} Child={CustomProjectCard} />
+      <CustomSlider type={false} Child={CustomProjectCard} data={data} />
     </Flex>
   );
 };

@@ -1,6 +1,7 @@
 import CustomSlider from "../../commons/custom-slider";
 import CustomProjectCard from "../../commons/custom-project-card";
 import { Flex, Typography, theme } from "antd";
+import { testimonial } from "../../utills/data";
 const Testimonial = () => {
   const { token } = theme.useToken();
   return (
@@ -38,7 +39,7 @@ const Testimonial = () => {
           industry call <span className="text-primary">MEDEBER</span> home.
         </Typography.Text>
       </Flex>
-      <CustomSlider type={true} Child={CustomProjectCard} />
+      <CustomSlider type={true} Child={CustomProjectCard} data={testimonial} />
     </Flex>
   );
 };

@@ -1,9 +1,21 @@
 import { Flex, Typography, theme } from "antd";
 
-import CustomSlider from "../../custom-slider";
-import CustomInfoCard from "../../custom-info-card";
-
-const CustomInfoSection = () => {
+//import CustomSlider from "../../custom-slider";
+//import CustomInfoCard from "../../custom-info-card";
+import CustomInfoSlider from "../../custon-info-slider";
+interface CustomInfoSectionProps {
+  data: {
+    projectName?: string;
+    name?: string;
+    image: string;
+    date?: string;
+    desc?: string;
+    designations?: string;
+    location?: string;
+    occupations?: string;
+  }[];
+}
+const CustomInfoSection: React.FC<CustomInfoSectionProps> = ({ data }) => {
   const { token } = theme.useToken();
   return (
     <Flex
@@ -37,8 +49,7 @@ const CustomInfoSection = () => {
           Our Energy Services Leadership
         </Typography.Text>
       </Flex>
-
-      <CustomSlider type={"info"} Child={CustomInfoCard} />
+      <CustomInfoSlider type="info" data={data} />
     </Flex>
   );
 };

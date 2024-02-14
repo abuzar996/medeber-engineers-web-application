@@ -2,11 +2,25 @@ import { Flex, Typography, theme } from "antd";
 
 interface CustomProjectCardProps {
   type: boolean | "info" | "news";
-  projectName: string;
+  projectName?: string;
+  name?: string;
   image: string;
+  date?: string;
+  desc?: string;
+  designations?: string;
+  location?: string;
+  occupations?: string;
 }
 
-const NewsTypedCard = ({ projectName }: { projectName: string }) => {
+const NewsTypedCard = ({
+  name,
+  date,
+  desc,
+}: {
+  name: string;
+  date: string;
+  desc: string;
+}) => {
   const { token } = theme.useToken();
   return (
     <Flex flex="1" vertical>
@@ -22,7 +36,7 @@ const NewsTypedCard = ({ projectName }: { projectName: string }) => {
             fontWeight: token.fontWeightStrong,
           }}
         >
-          JANUARY 23, 2024
+          {date}
         </Typography.Text>
         <Typography.Text
           style={{
@@ -31,7 +45,7 @@ const NewsTypedCard = ({ projectName }: { projectName: string }) => {
             fontWeight: token.fontWeightStrong,
           }}
         >
-          {projectName}
+          {name}
         </Typography.Text>
       </Flex>
       <Flex
@@ -45,15 +59,26 @@ const NewsTypedCard = ({ projectName }: { projectName: string }) => {
             fontWeight: token.fontWeightStrong,
           }}
         >
-          JANUARY 23, 2024 NEWS TLC Engineering Solutions Announces the
-          Promotion of Justin Mulhollan to Regional Director
+          {desc}
+          {/* { JANUARY 23, 2024 NEWS TLC Engineering Solutions Announces the
+          Promotion of Justin Mulhollan to Regional Director} */}
         </Typography.Text>
       </Flex>
     </Flex>
   );
 };
 
-const InfoTypedCard = ({ projectName }: { projectName: string }) => {
+const InfoTypedCard = ({
+  name,
+  designations,
+  occupations,
+  location,
+}: {
+  name: string;
+  designations: string;
+  location: string;
+  occupations: string;
+}) => {
   const { token } = theme.useToken();
   return (
     <>
@@ -65,7 +90,7 @@ const InfoTypedCard = ({ projectName }: { projectName: string }) => {
             fontWeight: token.fontWeightStrong,
           }}
         >
-          {projectName}
+          {name}
         </Typography.Text>
 
         <Typography.Text
@@ -75,7 +100,8 @@ const InfoTypedCard = ({ projectName }: { projectName: string }) => {
             color: "#efc75e",
           }}
         >
-          PE, LEED FELLO, WELL AP
+          {occupations}
+          {/* PE, LEED FELLO, WELL AP */}
         </Typography.Text>
       </Flex>
 
@@ -89,7 +115,7 @@ const InfoTypedCard = ({ projectName }: { projectName: string }) => {
             fontStyle: "italic",
           }}
         >
-          Principal| Direcetor of PEAK Institue
+          {designations}
         </Typography.Text>
       </Flex>
 
@@ -103,7 +129,7 @@ const InfoTypedCard = ({ projectName }: { projectName: string }) => {
             fontStyle: "italic",
           }}
         >
-          Deerfield Beach, Florida
+          {location}
         </Typography.Text>
       </Flex>
     </>
@@ -111,8 +137,14 @@ const InfoTypedCard = ({ projectName }: { projectName: string }) => {
 };
 const CustomInfoCard: React.FC<CustomProjectCardProps> = ({
   type,
-  projectName,
+  //projectName,
+  location,
+  designations,
+  occupations,
+  name,
   image,
+  date,
+  desc,
 }) => {
   const { token } = theme.useToken();
   return (
@@ -136,8 +168,17 @@ const CustomInfoCard: React.FC<CustomProjectCardProps> = ({
         />
       </Flex>
 
-      {type === "news" && <NewsTypedCard projectName={projectName} />}
-      {type === "info" && <InfoTypedCard projectName={projectName} />}
+      {type === "news" && (
+        <NewsTypedCard desc={desc!} date={date!} name={name!} />
+      )}
+      {type === "info" && (
+        <InfoTypedCard
+          occupations={occupations!}
+          designations={designations!}
+          name={name!}
+          location={location!}
+        />
+      )}
     </Flex>
   );
 };

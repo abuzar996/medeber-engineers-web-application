@@ -1,9 +1,21 @@
 import { Flex, Typography, theme } from "antd";
-import CustomSlider from "../../custom-slider";
-import CustomInfoCard from "../../custom-info-card";
+
+import CustomInfoSlider from "../../custon-info-slider";
 import Project from "../../../../../assets/Images/news.png";
 import { IoMdArrowRoundForward } from "react-icons/io";
-const CustomNewsSection = () => {
+interface CustomNewsSectionProps {
+  data: {
+    projectName?: string;
+    name?: string;
+    image: string;
+    date?: string;
+    desc?: string;
+    designations?: string;
+    location?: string;
+    occupations?: string;
+  }[];
+}
+const CustomNewsSection: React.FC<CustomNewsSectionProps> = ({ data }) => {
   const { token } = theme.useToken();
   return (
     <Flex
@@ -38,7 +50,7 @@ const CustomNewsSection = () => {
         <IoMdArrowRoundForward size="25" className="fill-secondary" />
       </Flex>
 
-      <CustomSlider type={"news"} Child={CustomInfoCard} />
+      <CustomInfoSlider type={"news"} data={data} />
     </Flex>
   );
 };

@@ -73,8 +73,52 @@ export const services: DefaultOptionType = {
         Icon: <VscSymbolStructure />,
       },
       projects: [
+        { name: "Structural Engineering", Image: Structural },
         { name: "Structural Engineering", Image: Market },
         { name: "Structural Engineering", Image: Market },
+      ],
+      news: [
+        {
+          name: "NEWS",
+          image: Structural,
+          date: "January 24, 2023.",
+          desc: "This is the News",
+        },
+        {
+          name: "NEWS",
+          image: Structural,
+          date: "January 24, 2023.",
+          desc: "This is the News",
+        },
+        {
+          name: "NEWS",
+          image: Structural,
+          date: "January 24, 2023.",
+          desc: "This is the News",
+        },
+      ],
+      leaders: [
+        {
+          name: "Thomas",
+          image: Structural,
+          designations: "XYZ",
+          location: "xyz",
+          occupations: "abc",
+        },
+        {
+          name: "Medeber",
+          image: Structural,
+          designations: "XYZ",
+          location: "xyz",
+          occupations: "abc",
+        },
+        {
+          name: "Fess",
+          image: Structural,
+          designations: "XYZ",
+          location: "xyz",
+          occupations: "abc",
+        },
       ],
       intro: {
         intro1:
@@ -99,6 +143,15 @@ export const services: DefaultOptionType = {
       projects: [
         { name: "Structural Engineering", Image: Market },
         { name: "Structural Engineering", Image: Market },
+      ],
+      leaders: [
+        {
+          name: "abuzar",
+          Image: Structural,
+          designations: "XYZ",
+          location: "xyz",
+          occupations: "abc",
+        },
       ],
       data: {
         head: "Structural Engineering",
@@ -126,6 +179,15 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      leaders: [
+        {
+          name: "abuzar",
+          Image: Structural,
+          designations: "XYZ",
+          location: "xyz",
+          occupations: "abc",
+        },
+      ],
       projects: [
         { name: "Structural Engineering", Image: Market },
         { name: "Structural Engineering", Image: Market },
@@ -156,6 +218,15 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      leaders: [
+        {
+          name: "abuzar",
+          Image: Structural,
+          designations: "XYZ",
+          location: "xyz",
+          occupations: "abc",
+        },
+      ],
       projects: [
         { name: "Structural Engineering", Image: Market },
         { name: "Structural Engineering", Image: Market },
@@ -186,6 +257,15 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      leaders: [
+        {
+          name: "abuzar",
+          Image: Structural,
+          designations: "XYZ",
+          location: "xyz",
+          occupations: "abc",
+        },
+      ],
       projects: [
         { name: "Structural Engineering", Image: Market },
         { name: "Structural Engineering", Image: Market },
@@ -216,6 +296,15 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      leaders: [
+        {
+          name: "abuzar",
+          Image: Structural,
+          designations: "XYZ",
+          location: "xyz",
+          occupations: "abc",
+        },
+      ],
       projects: [
         { name: "Structural Engineering", Image: Market },
         { name: "Structural Engineering", Image: Market },
@@ -226,6 +315,7 @@ export const services: DefaultOptionType = {
         intro2:
           "We analyze the building site and requirements, listen to your expectations and understand the desired aesthetic impact. Armed with that knowledge, we work closely with our owner, architectural and builder partners to create effective structural design solutions. ",
       },
+
       data: {
         head: "Structural Engineering",
         image: Structural,
@@ -246,7 +336,17 @@ export const services: DefaultOptionType = {
           </Flex>
         </Card>
       ),
+      leaders: [
+        {
+          name: "abuzar",
+          Image: Structural,
+          designations: "XYZ",
+          location: "xyz",
+          occupations: "abc",
+        },
+      ],
       projects: [
+        { name: "Structural Engineering", Image: Market },
         { name: "Structural Engineering", Image: Market },
         { name: "Structural Engineering", Image: Market },
       ],
@@ -672,3 +772,21 @@ export const servicesData: CustomContainer = {
     },
   ],
 };
+
+export const testimonial = [
+  {
+    name: "Structural Engineering",
+    Image: Market,
+    desc: "This is the description",
+  },
+  {
+    name: "Structural Engineering",
+    Image: Market,
+    desc: "This is the description",
+  },
+  {
+    name: "Structural Engineering",
+    Image: Market,
+    desc: "This is the description",
+  },
+];

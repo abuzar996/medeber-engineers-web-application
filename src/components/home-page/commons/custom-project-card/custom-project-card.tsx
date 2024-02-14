@@ -1,12 +1,21 @@
 import { Flex, Typography, theme } from "antd";
-import Img1 from "../../../../assets/Images/img2.png";
+
 export interface CustomProjectCardProps {
   type: boolean | "news" | "info";
-  projectName: string;
+  projectName?: string;
+  name?: string;
+  image: string;
+  date?: string;
+  desc?: string;
+  designations?: string;
+  location?: string;
+  occupations?: string;
 }
 const CustomProjectCard: React.FC<CustomProjectCardProps> = ({
   type,
   projectName,
+  desc,
+  image,
 }) => {
   const { token } = theme.useToken();
   return (
@@ -24,7 +33,7 @@ const CustomProjectCard: React.FC<CustomProjectCardProps> = ({
       <Flex flex="1">
         <img
           className="w-full"
-          src={Img1}
+          src={image}
           style={{
             height: "300px",
             borderRadius: token.borderRadiusLG,
@@ -33,14 +42,16 @@ const CustomProjectCard: React.FC<CustomProjectCardProps> = ({
       </Flex>
       {type && (
         <Flex flex="1" style={{ padding: token.paddingXS }} align="center">
-          <Typography.Text
-            style={{
-              fontSize: token.fontSizeHeading5,
-              color: "#efc75e",
-            }}
-          >
-            Hello this is project description
-          </Typography.Text>
+          {desc && (
+            <Typography.Text
+              style={{
+                fontSize: token.fontSizeHeading5,
+                color: "#efc75e",
+              }}
+            >
+              {desc}
+            </Typography.Text>
+          )}
         </Flex>
       )}
       <Flex flex="1" style={{ padding: token.paddingXS }}>
